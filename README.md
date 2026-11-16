@@ -64,6 +64,7 @@ GPU.
     requirements-cluster.txt pip freeze of the environment that produced the runs, for reference
                              (two entries are local builds and cannot be installed from it)
     MANIFEST.sha256          SHA-256 of every released file (python3 tools/make_manifest.py --check)
+    LICENSE, LICENSE-DATA    licences of the code and of the data
 
 Task sets:
 
@@ -149,5 +150,7 @@ Archive: https://doi.org/10.5281/zenodo.24274470 (all versions; see `CITATION.cf
 
 ## Licence
 
-Code under the MIT License. Tasks, synthetic tables and run files under
-CC BY 4.0. See `LICENSE`.
+Code under the MIT License (`LICENSE`). Tasks, synthetic tables, run files,
+reports and figures under CC BY 4.0, except the run files of
+Qwen2.5-3B-Instruct, which remain under the Qwen Research License
+(`LICENSE-DATA`).

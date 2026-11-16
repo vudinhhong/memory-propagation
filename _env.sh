@@ -1,9 +1,7 @@
 # Environment shared by the job scripts (sourced from _job_body.sh) and by download.sh.
-# USER_STORAGE holds the model cache, the Python environment and the Hugging Face token. The runs used
-# a cluster home directory; elsewhere set USER_STORAGE (and PY) before running, or a local .cache/ is used.
-if [ -z "$USER_STORAGE" ]; then
-    if [ -d /storage/brno2/home/vdhong ]; then USER_STORAGE="/storage/brno2/home/vdhong"; else USER_STORAGE="$PWD/.cache"; fi
-fi
+# USER_STORAGE holds the model cache, the Python environment and the Hugging Face token. Set it (and PY)
+# before running; without it a local .cache/ is used.
+USER_STORAGE="${USER_STORAGE:-$PWD/.cache}"
 export HF_HOME="$USER_STORAGE/hf_models_cache"
 export HF_HUB_CACHE="$HF_HOME/hub"
 export TRANSFORMERS_CACHE="$HF_HUB_CACHE"

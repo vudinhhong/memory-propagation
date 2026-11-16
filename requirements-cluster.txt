@@ -1,4 +1,4 @@
-# pip freeze of /auto/brno2/brno2/vdhong/.conda/envs/vllm_env/bin/python (Python 3.10.20)
+# pip freeze of the conda environment that ran the experiments (Python 3.10.20)
 absl-py==2.4.0
 accelerate==1.13.0
 aiohappyeyeballs==2.6.1
@@ -31,7 +31,7 @@ cuda-tile==1.3.0
 cuda-toolkit==13.0.2
 cycler==0.12.1
 datasets==4.8.5
-deep_gemm @ file:///auto/brno2/home/vdhong/DeepGEMM
+# deep_gemm: local build from source (not installable from this file)
 depyf==0.20.0
 dill==0.4.1
 diskcache==5.6.3
