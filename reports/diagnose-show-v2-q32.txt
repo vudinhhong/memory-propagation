@@ -1,0 +1,347 @@
+
+=== v2_p2_q32_notes   1920 steps, 8 needed a retry
+  correct             1845   96.1%
+  wrong value           72    3.8%
+  TypeError              2    0.1%
+  no ANSWER line         1    0.1%
+  not correct by step: 4:6  5:11  6:17  7:19  8:22
+  --trace: 72 wrong values at steps that use earlier results
+    from wrong upstream                     31   43.1%
+    from rounded upstream                    1    1.4%
+    own error: predict                      38   52.8%
+    upstream not recorded                    1    1.4%
+    own error: ratio                         1    1.4%
+      own error: predict: t001 step 8: answer 46.58391439599604 true 59.369; step 7: recorded 51.27919324577861 true 51.2792
+      own error: predict: t007 step 6: answer 0.5759915601660007 true 0.573099; step 5: recorded 470.40361445783134 true 470.404
+      own error: predict: t009 step 5: answer 22.55087132739701 true 29.3755; step 2: recorded 36.0 true 36
+      own error: predict: t011 step 4: answer 47.419921500128176 true 43.6665; step 3: recorded 143.0 true 143
+      from wrong upstream: t009 step 6: answer 123.57581227436823 true 125.103; step 5: recorded 22.55087132739701 true 29.3755
+      from wrong upstream: t011 step 6: answer 461.0 true 391; step 1: recorded 26.0 true 26, step 4: recorded 47.419921500128176 true 43.6665
+      from wrong upstream: t011 step 8: answer 61.591212121212116 true 60.9829; step 4: recorded 47.419921500128176 true 43.6665
+      from wrong upstream: t045 step 6: answer 63.36302379125095 true 65.9139; step 5: recorded 65.1967 true 70.8673
+      upstream not recorded: t011 step 7: answer 0.0 true 0.194373; step 5: recorded None true 76, step 6: recorded 461.0 true 391
+      from rounded upstream: t026 step 6: answer 227.0 true 228; step 4: recorded 0.4553 true 0.45528
+      own error: ratio: t048 step 7: answer 14.725 true 1.98316; step 4: recorded 589.0 true 589, step 6: recorded 297.0 true 297
+
+  --- wrong value: t001 step 8
+  code:   import pandas as pd
+          import numpy as np
+          
+          # Load the data
+          df = pd.read_csv("t001.csv")
+          
+          # Step 1: 25th percentile of systolic_bp
+          q1_systolic_bp = df['systolic_bp'].quantile(0.25)
+          
+          # Step 2: 75th percentile of systolic_bp
+          q3_systolic_bp = df['systolic_bp'].quantile(0.75)
+          
+          # Step 3: Median of `weight_kg` where `arm` == 'high'
+          median_weight_high = df[df['arm'] == 'high']['weight_kg'].median()
+          
+          # Step 4: Count of rows where `weight_kg` is strictly greater than the result of step 3
+          count_weight_gt_median = df[df['weight_kg'] > median_weight_high]['weight_kg'].count()
+          
+          # Step 5: Mean of `temperature_c` for rows where `systolic_bp` > step 2 result
+          mean_temp_bp_gt_q3 = df[df['systolic_bp'] > q3_systolic_bp]['temperature_c'].mean()
+          
+          # Step 6: Mean of `systolic_bp` for rows where `temperature_c` > step 5 result
+          mean_bp_temp_gt_mean = df[df['temperature_c'] > mean_temp_bp_gt_q3]['systolic_bp'].mean()
+          
+          # Step 7: Mean of `income_k` for rows where `systolic_bp` > step 1 result
+          mean_income_bp_gt_q1 = df[df['systolic_bp'] > q1_systolic_bp]['income_k'].mean()
+          
+          # Step 8: Fit an ordinary least-squares straight line that predicts `yield_pct` from `income_k`
+          # using the rows where both columns are present, and report the pr
+  stdout: ANSWER: 46.58391439599604
+  error:  
+
+  --- wrong value: t007 step 6
+  code:   import pandas as pd
+          import numpy as np
+          
+          # Load the data
+          df = pd.read_csv("t007.csv")
+          
+          # Step 1 to 5 results from the history
+          step_1_result = 117.0
+          step_2_result = 130.0
+          step_3_result = 56.45
+          step_4_result = 0.25037707390648567
+          step_5_result = 470.40361445783134
+          
+          # Step 6: Fit an ordinary least-squares straight line that predicts `concentration` from `reaction_ms`
+          # using the rows where both columns are present, and report the predicted value of `concentration`
+          # when `reaction_ms` equals the result of step 5.
+          
+          # Filter out rows where either `concentration` or `reaction_ms` is missing
+          filtered_df = df.dropna(subset=['concentration', 'reaction_ms'])
+          
+          # Fit the linear regression model
+          X = filtered_df['reaction_ms'].values.reshape(-1, 1)
+          y = filtered_df['concentration'].values
+          coefficients = np.linalg.lstsq(X, y, rcond=None)[0]
+          
+          # Predict the concentration for the reaction_ms value from step 5
+          predicted_concentration = coefficients * step_5_result
+          
+          # Store the result
+          result = predicted_concentration[0]
+          print(f"ANSWER: {result}")
+  stdout: ANSWER: 0.5759915601660007
+  error:  
+
+  --- wrong value: t009 step 5
+  code:   import pandas as pd
+          import numpy as np
+          
+          # Load the data
+          df = pd.read_csv("t009.csv")
+          
+          # Step 1: 75th percentile of `age_years`
+          age_75th_percentile = df['age_years'].quantile(0.75)
+          
+          # Step 2: Median age_years for lab 'LabC'
+          median_age_LabC = df[df['lab'] == 'LabC']['age_years'].median()
+          
+          # Step 3: Mean of `systolic_bp`, ignoring missing values
+          mean_systolic_bp = df['systolic_bp'].mean()
+          
+          # Step 4: Count of rows where systolic_bp is strictly greater than the result of step 3
+          count_systolic_bp_greater_than_mean = df[df['systolic_bp'] > mean_systolic_bp].shape[0]
+          
+          # Step 5: Fit an ordinary least-squares straight line that predicts `length_cm` from `age_years`
+          # using the rows where both columns are present, and report the predicted value of `length_cm`
+          # when `age_years` equals the result of step 2.
+          
+          # Filter rows where both `length_cm` and `age_years` are not missing
+          df_filtered = df.dropna(subset=['length_cm', 'age_years'])
+          
+          # Fit the OLS line
+          X = df_filtered['age_years'].values.reshape(-1, 1)
+          y = df_filtered['length_cm'].values
+          coefficients = np.linalg.lstsq(X, y, rcond=None)[0]
+          slope = coefficients[0]
+          
+          # Predict the value of `length_cm` when `age_years` equals the result 
+  stdout: ANSWER: 22.55087132739701
+  error:  
+
+  --- wrong value: t009 step 6
+  code:   import pandas as pd
+          
+          # Load the data
+          df = pd.read_csv("t009.csv")
+          
+          # Step 5 result from the history
+          step_5_result = 22.55087132739701
+          
+          # Filter rows where length_cm is strictly greater than the result of step 5
+          filtered_df = df[df['length_cm'] > step_5_result]
+          
+          # Compute the mean of systolic_bp, ignoring missing values
+          result = filtered_df['systolic_bp'].mean()
+          
+          print(f"ANSWER: {result}")
+  stdout: ANSWER: 123.57581227436823
+  error:  
+
+  --- TypeError: t011 step 5
+  code:   import pandas as pd
+          import numpy as np
+          
+          # Load the data
+          df = pd.read_csv("t011.csv")
+          
+          # Step 1: 25th percentile of `dose_mg` for `lab` == 'LabC'
+          step1_result = df[df['lab'] == 'LabC']['dose_mg'].quantile(0.25)
+          
+          # Step 2: Median of `dose_mg`, ignoring missing values
+          step2_result = df['dose_mg'].median()
+          
+          # Step 3: 75th percentile of systolic_bp at LabA
+          step3_result = df[df['lab'] == 'LabA']['systolic_bp'].quantile(0.75)
+          
+          # Step 4: Predicted `dose_mg` at systolic_bp from Step 3
+          # Fit an ordinary least-squares straight line that predicts `dose_mg` from `systolic_bp`
+          valid_rows = df.dropna(subset=['dose_mg', 'systolic_bp'])
+          X = valid_rows['systolic_bp'].values.reshape(-1, 1)
+          y = valid_rows['dose_mg'].values
+          slope, intercept = np.polyfit(X, y, 1)
+          step4_result = slope * step3_result + intercept
+          
+          # Step 5: Count the rows where `dose_mg` lies strictly between the result of step 2 and the result of step 4
+          lower_bound = min(step2_result, step4_result)
+          upper_bound = max(step2_result, step4_result)
+          step5_result = df[(df['dose_mg'] > lower_bound) & (df['dose_mg'] < upper_bound)]['dose_mg'].count()
+          
+          # Store the result of step 5 in `result`
+          result = step5_result
+          print(f"ANSWER: {result}")
+  stdout: 
+  error:  Traceback (most recent call last):
+            File "/auto/brno2/brno2/vdhong/mem-propagation/code/memprop/executor.py", line 48, in _run
+              exec(compile(code, "<script>", "exec"), {"__name__": "__main__"})
+            File "<script>", line 21, in <module>
+            File "/storage/brno2/home/vdhong/.conda/envs/vllm_env/lib/python3.10/site-packages/numpy/lib/_polynomial_impl.py", line 634, in polyfit
+              raise TypeError("expected 1D vector for x")
+          TypeError: expected 1D vector for x
+
+  --- TypeError: t162 step 8
+  code:   import pandas as pd
+          import numpy as np
+          
+          # Load the data
+          df = pd.read_csv("t162.csv")
+          
+          # Step 1: 75th percentile of `weight_kg`
+          step1_result = df['weight_kg'].quantile(0.75)
+          
+          # Step 5: Predicted `weight_kg` at dose from Step 4
+          # We need to fit a linear regression model to predict weight_kg from dose_mg
+          # using rows where both columns are present.
+          df_no_na = df.dropna(subset=['weight_kg', 'dose_mg'])
+          X = df_no_na[['dose_mg']]
+          y = df_no_na['weight_kg']
+          model = np.poly1d(np.polyfit(X, y, 1))
+          step4_dose = 37.56592920353982  # From the history
+          step5_result = model(step4_dose)
+          
+          # Step 8: Compute the result of step 1 minus the result of step 5
+          result = step1_result - step5_result
+          print(f"ANSWER: {result}")
+  stdout: 
+  error:  Traceback (most recent call last):
+            File "/auto/brno2/brno2/vdhong/mem-propagation/code/memprop/executor.py", line 48, in _run
+              exec(compile(code, "<script>", "exec"), {"__name__": "__main__"})
+            File "<script>", line 16, in <module>
+            File "/storage/brno2/home/vdhong/.conda/envs/vllm_env/lib/python3.10/site-packages/numpy/lib/_polynomial_impl.py", line 634, in polyfit
+              raise TypeError("expected 1D vector for x")
+          TypeError: expected 1D vector for x
+
+  --- no ANSWER line: t086 step 6
+  code:   import pandas as pd
+          
+          # Load the data
+          df = pd.read_csv("t086.csv")
+          
+          # Step 1: 75th percentile of `weight_kg` for `arm` == 'low'
+          step1_result = df[df['arm'] == 'low']['weight_kg'].quantile(0.75)
+          
+          # Step 2: Mean of `weight_kg`, ignoring missing values
+          step2_result = df['weight_kg'].mean()
+          
+          # Step 3: 25th percentile of `duration_min` for `arm` == 'control'
+          step3_result = df[df['arm'] == 'control']['duration_min'].quantile(0.25)
+          
+          # Step 4: Count of rows where `weight_kg` is strictly between the results of step 1 and step 2
+          step4_result = df[(df['weight_kg'] > step1_result) & (df['weight_kg'] < step2_result)]['weight_kg'].count()
+          
+          # Step 5: Count of rows where `weight_kg` is strictly greater than the result of step 2
+          step5_result = df[df['weight_kg'] > step2_result]['weight_kg'].count()
+          
+          # Step 6: Compute the result of step 5 divided by the result of step 4
+          result = step5_result / step4_result
+          
+          print(f"ANSWER: {result}")
+  stdout: ANSWER: inf
+  error:  
+
+=== v2_p2_q32_rawlog   1920 steps, 2 needed a retry
+  correct             1830   95.3%
+  wrong value           90    4.7%
+  not correct by step: 4:6  5:20  6:24  7:20  8:20
+  --trace: 90 wrong values at steps that use earlier results
+    from wrong upstream                     50   55.6%
+    own error: predict                      40   44.4%
+      own error: predict: t005 step 4: answer 30.84466808221683 true 31.0831; step 1: recorded 48.9 true 48.9
+      own error: predict: t007 step 6: answer 0.5759915601660007 true 0.573099; step 5: recorded 470.40361445783134 true 470.404
+      own error: predict: t010 step 5: answer 49.9846303223404 true 48.6948; step 2: recorded 69.5 true 69.5
+      own error: predict: t011 step 4: answer 47.419921500128176 true 43.6665; step 3: recorded 143.0 true 143
+      from wrong upstream: t005 step 5: answer 1026.0 true 978; step 4: recorded 30.84466808221683 true 31.0831
+      from wrong upstream: t005 step 8: answer 1.0138339920948616 true 0.966403; step 5: recorded 1026.0 true 978, step 7: recorded 1012.0 true 1012
+      from wrong upstream: t010 step 6: answer 67.140234375 true 66.9264; step 5: recorded 49.9846303223404 true 48.6948
+      from wrong upstream: t011 step 5: answer 146.0 true 76; step 2: recorded 39.5 true 39.5, step 4: recorded 47.419921500128176 true 43.6665
+
+  --- wrong value: t005 step 4
+  code:   import pandas as pd
+          import numpy as np
+          
+          # Load the data
+          df = pd.read_csv("t005.csv")
+          
+          # Step 1 result
+          dose_75th_percentile = 48.9
+          
+          # Filter out rows where either dose_mg or length_cm is missing
+          filtered_df = df.dropna(subset=['dose_mg', 'length_cm'])
+          
+          # Fit an ordinary least-squares straight line
+          X = filtered_df['dose_mg'].values.reshape(-1, 1)
+          y = filtered_df['length_cm'].values
+          coeffs = np.linalg.lstsq(X, y, rcond=None)[0]
+          
+          # Predicted value of length_cm when dose_mg equals the result of step 1
+          result = coeffs * dose_75th_percentile
+          
+          print(f"ANSWER: {result[0]}")
+  stdout: ANSWER: 30.84466808221683
+  error:  
+
+  --- wrong value: t005 step 5
+  code:   import pandas as pd
+          
+          # Load the data
+          df = pd.read_csv("t005.csv")
+          
+          # Step 4 result
+          step4_result = 30.84466808221683
+          
+          # Count rows where length_cm is strictly greater than the result of step 4
+          result = df[df['length_cm'] > step4_result]['length_cm'].count()
+          
+          print(f"ANSWER: {result}")
+  stdout: ANSWER: 1026
+  error:  
+
+  --- wrong value: t005 step 8
+  code:   # Load the data
+          import pandas as pd
+          df = pd.read_csv("t005.csv")
+          
+          # Given results from previous steps
+          step_5_result = 1026
+          step_7_result = 1012
+          
+          # Compute the result of step 8
+          result = step_5_result / step_7_result
+          
+          # Print the answer
+          print(f"ANSWER: {result}")
+  stdout: ANSWER: 1.0138339920948616
+  error:  
+
+  --- wrong value: t007 step 6
+  code:   import pandas as pd
+          import numpy as np
+          
+          # Load the data
+          df = pd.read_csv("t007.csv")
+          
+          # Step 5 result
+          step_5_result = 470.40361445783134
+          
+          # Filter rows where both `concentration` and `reaction_ms` are not missing
+          filtered_df = df.dropna(subset=['concentration', 'reaction_ms'])
+          
+          # Fit an ordinary least-squares straight line
+          X = filtered_df['reaction_ms'].values.reshape(-1, 1)
+          y = filtered_df['concentration'].values
+          coeffs = np.linalg.lstsq(X, y, rcond=None)[0]
+          
+          # Predicted value of `concentration` when `reaction_ms` equals the result of step 5
+          result = coeffs * step_5_result
+          
+          print(f"ANSWER: {result[0]}")
+  stdout: ANSWER: 0.5759915601660007
+  error:  

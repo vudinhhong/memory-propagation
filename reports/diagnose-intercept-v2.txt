@@ -1,0 +1,251 @@
+
+=== v2_p2_q07_notes   1920 steps, 114 needed a retry
+  correct             1603   83.5%
+  wrong value          272   14.2%
+  ValueError            17    0.9%
+  SyntaxError           12    0.6%
+  no ANSWER line         6    0.3%
+  other error            4    0.2%
+  KeyError               3    0.2%
+  TypeError              2    0.1%
+  AttributeError         1    0.1%
+  not correct by step: 2:10  3:11  4:38  5:50  6:66  7:65  8:77
+  --trace: 251 wrong values at steps that use earlier results
+    from wrong upstream                     87   34.7%
+    from rounded upstream                    6    2.4%
+    own error: predict                      40   15.9%
+    own error: count_gt                     29   11.6%
+    own error: count_between                23    9.2%
+    own error: share_gt                     17    6.8%
+    upstream not recorded                   14    5.6%
+    own error: cond_mean                    12    4.8%
+    own error: zscore                       10    4.0%
+    own error: ratio                         5    2.0%
+    own error: diff                          5    2.0%
+    own error: pct_change                    3    1.2%
+
+=== v2_p2_q07_rawlog   1920 steps, 90 needed a retry
+  correct             1593   83.0%
+  wrong value          283   14.7%
+  ValueError            13    0.7%
+  no ANSWER line        11    0.6%
+  SyntaxError            7    0.4%
+  AttributeError         3    0.2%
+  other error            3    0.2%
+  KeyError               2    0.1%
+  ZeroDivisionError      1    0.1%
+  NameError              1    0.1%
+  AssertionError         1    0.1%
+  TypeError              1    0.1%
+  NotImplementedError     1    0.1%
+  not correct by step: 2:20  3:14  4:42  5:38  6:61  7:63  8:89
+  --trace: 249 wrong values at steps that use earlier results
+    from wrong upstream                     52   20.9%
+    from rounded upstream                    2    0.8%
+    own error: count_between                39   15.7%
+    own error: zscore                       35   14.1%
+    own error: predict                      30   12.0%
+    own error: cond_mean                    28   11.2%
+    own error: share_gt                     16    6.4%
+    own error: count_gt                     15    6.0%
+    own error: ratio                        13    5.2%
+    own error: diff                          9    3.6%
+    upstream not recorded                    6    2.4%
+    own error: pct_change                    4    1.6%
+
+=== v2_p2_q07_fullctx   1920 steps, 83 needed a retry
+  correct             1722   89.7%
+  wrong value          145    7.6%
+  ValueError            27    1.4%
+  no ANSWER line        14    0.7%
+  other error            9    0.5%
+  NameError              1    0.1%
+  SyntaxError            1    0.1%
+  AttributeError         1    0.1%
+  not correct by step: 3:2  4:28  5:36  6:49  7:39  8:44
+  --trace: 143 wrong values at steps that use earlier results
+    from wrong upstream                     22   15.4%
+    own error: count_between                28   19.6%
+    own error: share_gt                     19   13.3%
+    own error: cond_mean                    18   12.6%
+    own error: count_gt                     17   11.9%
+    own error: zscore                       12    8.4%
+    own error: predict                      11    7.7%
+    upstream not recorded                   10    7.0%
+    own error: pct_change                    3    2.1%
+    own error: diff                          2    1.4%
+    own error: ratio                         1    0.7%
+
+=== v2_p2_l08_notes   1920 steps, 185 needed a retry
+  correct             1363   71.0%
+  wrong value          461   24.0%
+  ValueError            19    1.0%
+  no ANSWER line        18    0.9%
+  TypeError             17    0.9%
+  AssertionError         6    0.3%
+  NameError              6    0.3%
+  other error            6    0.3%
+  ZeroDivisionError      6    0.3%
+  SyntaxError            5    0.3%
+  AttributeError         4    0.2%
+  KeyError               3    0.2%
+  IndexError             3    0.2%
+  ModuleNotFoundError     2    0.1%
+  ImportError            1    0.1%
+  not correct by step: 2:11  3:4  4:70  5:102  6:110  7:129  8:131
+  --trace: 446 wrong values at steps that use earlier results
+    from wrong upstream                     88   19.7%
+    from rounded upstream                    2    0.4%
+    own error: predict                      93   20.9%
+    own error: count_gt                     57   12.8%
+    upstream not recorded                   50   11.2%
+    own error: count_between                38    8.5%
+    own error: zscore                       37    8.3%
+    own error: share_gt                     26    5.8%
+    own error: cond_mean                    18    4.0%
+    own error: diff                         11    2.5%
+    own error: pct_change                   10    2.2%
+    own error: ratio                         9    2.0%
+    own error: OLS without intercept         7    1.6%
+
+=== v2_p2_l08_rawlog   1920 steps, 190 needed a retry
+  correct             1197   62.3%
+  wrong value          613   31.9%
+  ValueError            35    1.8%
+  no ANSWER line        27    1.4%
+  TypeError             14    0.7%
+  other error            9    0.5%
+  AttributeError         8    0.4%
+  NameError              5    0.3%
+  SyntaxError            4    0.2%
+  ModuleNotFoundError     3    0.2%
+  IndexError             2    0.1%
+  AssertionError         1    0.1%
+  ZeroDivisionError      1    0.1%
+  KeyError               1    0.1%
+  not correct by step: 2:3  3:2  4:119  5:143  6:151  7:146  8:159
+  --trace: 608 wrong values at steps that use earlier results
+    from wrong upstream                     34    5.6%
+    from rounded upstream                    3    0.5%
+    own error: cond_mean                   109   17.9%
+    own error: count_gt                    105   17.3%
+    own error: predict                      92   15.1%
+    upstream not recorded                   56    9.2%
+    own error: zscore                       56    9.2%
+    own error: share_gt                     54    8.9%
+    own error: count_between                38    6.2%
+    own error: diff                         24    3.9%
+    own error: ratio                        18    3.0%
+    own error: pct_change                   14    2.3%
+    own error: OLS without intercept         4    0.7%
+    own error: OLS coefficients swapped      1    0.2%
+
+=== v2_p2_l08_fullctx   1920 steps, 207 needed a retry
+  correct             1551   80.8%
+  wrong value          233   12.1%
+  no ANSWER line        56    2.9%
+  ValueError            29    1.5%
+  ModuleNotFoundError    11    0.6%
+  NameError              9    0.5%
+  IndexError             8    0.4%
+  TypeError              7    0.4%
+  SyntaxError            6    0.3%
+  other error            5    0.3%
+  AttributeError         2    0.1%
+  KeyError               2    0.1%
+  AssertionError         1    0.1%
+  not correct by step: 2:2  3:1  4:38  5:78  6:81  7:80  8:89
+  --trace: 230 wrong values at steps that use earlier results
+    from wrong upstream                     32   13.9%
+    from rounded upstream                    1    0.4%
+    own error: count_gt                     48   20.9%
+    own error: share_gt                     33   14.3%
+    own error: cond_mean                    31   13.5%
+    own error: predict                      26   11.3%
+    upstream not recorded                   23   10.0%
+    own error: count_between                21    9.1%
+    own error: pct_change                    5    2.2%
+    own error: zscore                        4    1.7%
+    own error: diff                          3    1.3%
+    own error: OLS coefficients swapped      2    0.9%
+    own error: ratio                         1    0.4%
+
+=== v2_p2_q14_notes   1920 steps, 34 needed a retry
+  correct             1851   96.4%
+  wrong value           65    3.4%
+  ValueError             3    0.2%
+  no ANSWER line         1    0.1%
+  not correct by step: 4:14  5:12  6:16  7:11  8:16
+  --trace: 65 wrong values at steps that use earlier results
+    from wrong upstream                     19   29.2%
+    own error: count_gt                     20   30.8%
+    own error: count_between                 8   12.3%
+    own error: cond_mean                     6    9.2%
+    own error: share_gt                      5    7.7%
+    own error: predict                       4    6.2%
+    own error: diff                          1    1.5%
+    own error: OLS without intercept         1    1.5%
+    own error: zscore                        1    1.5%
+
+=== v2_p2_q14_rawlog   1920 steps, 35 needed a retry
+  correct             1865   97.1%
+  wrong value           51    2.7%
+  ValueError             3    0.2%
+  NameError              1    0.1%
+  not correct by step: 4:6  5:9  6:16  7:12  8:12
+  --trace: 51 wrong values at steps that use earlier results
+    from wrong upstream                     15   29.4%
+    own error: count_gt                      8   15.7%
+    own error: count_between                 7   13.7%
+    own error: predict                       6   11.8%
+    own error: share_gt                      6   11.8%
+    own error: OLS without intercept         3    5.9%
+    upstream not recorded                    3    5.9%
+    own error: cond_mean                     2    3.9%
+    own error: diff                          1    2.0%
+
+=== v2_p2_q14_fullctx   1920 steps, 55 needed a retry
+  correct             1888   98.3%
+  wrong value           19    1.0%
+  other error           11    0.6%
+  ValueError             2    0.1%
+  not correct by step: 4:3  5:9  6:7  7:8  8:5
+  --trace: 19 wrong values at steps that use earlier results
+    from wrong upstream                      5   26.3%
+    own error: count_gt                      3   15.8%
+    own error: predict                       3   15.8%
+    upstream not recorded                    3   15.8%
+    own error: count_between                 2   10.5%
+    own error: share_gt                      2   10.5%
+    own error: cond_mean                     1    5.3%
+
+=== v2_p2_q32_notes   1920 steps, 8 needed a retry
+  correct             1845   96.1%
+  wrong value           72    3.8%
+  TypeError              2    0.1%
+  no ANSWER line         1    0.1%
+  not correct by step: 4:6  5:11  6:17  7:19  8:22
+  --trace: 72 wrong values at steps that use earlier results
+    from wrong upstream                     31   43.1%
+    from rounded upstream                    1    1.4%
+    own error: OLS without intercept        37   51.4%
+    upstream not recorded                    1    1.4%
+    own error: predict                       1    1.4%
+    own error: ratio                         1    1.4%
+
+=== v2_p2_q32_rawlog   1920 steps, 2 needed a retry
+  correct             1830   95.3%
+  wrong value           90    4.7%
+  not correct by step: 4:6  5:20  6:24  7:20  8:20
+  --trace: 90 wrong values at steps that use earlier results
+    from wrong upstream                     50   55.6%
+    own error: OLS without intercept        40   44.4%
+
+=== v2_p2_q32_fullctx   1920 steps, 6 needed a retry
+  correct             1917   99.8%
+  wrong value            3    0.2%
+  not correct by step: 6:1  7:1  8:1
+  --trace: 3 wrong values at steps that use earlier results
+    from wrong upstream                      1   33.3%
+    own error: count_between                 1   33.3%
+    own error: OLS without intercept         1   33.3%

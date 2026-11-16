@@ -1,0 +1,28 @@
+{
+ "name": "steel",
+ "group_col": "fault",
+ "numeric": [
+  "Pixels_Areas",
+  "X_Perimeter",
+  "Y_Perimeter",
+  "Sum_of_Luminosity",
+  "Maximum_of_Luminosity",
+  "Steel_Plate_Thickness",
+  "Edges_Index",
+  "Luminosity_Index"
+ ],
+ "n_rows": 1941,
+ "n_cols": 29,
+ "levels": {
+  "Other_Faults": 673,
+  "Bumps": 402,
+  "K_Scatch": 391,
+  "Z_Scratch": 190,
+  "Pastry": 158,
+  "Stains": 72,
+  "Dirtiness": 55
+ },
+ "source": "https://archive.ics.uci.edu/static/public/198/steel+plates+faults.zip :: Faults.NNA",
+ "raw_sha256": "08994f5b0185a8e6cc22afe9910fd36834990fb1ca30852ed79012a832fbff55",
+ "citation": "Buscema M, Terzi S, Tastle W (2010); UCI Machine Learning Repository, dataset 198"
+}

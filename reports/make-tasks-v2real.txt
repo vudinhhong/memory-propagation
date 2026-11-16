@@ -1,0 +1,15 @@
+15:12:29   iris: 40 distinct chains (group 'species', filter levels ['setosa', 'versicolor', 'virginica'])
+15:12:30   wine: 40 distinct chains (group 'cultivar', filter levels ['cultivar_1', 'cultivar_2', 'cultivar_3'])
+15:12:30   diabetes: 40 distinct chains (group 'sex', filter levels ['sex_1', 'sex_2'])
+15:12:31   heart: 40 distinct chains (group 'sex', filter levels ['female', 'male'])
+15:12:32   credit: 40 distinct chains (group 'sex', filter levels ['female', 'male'])
+15:12:32   steel: 40 distinct chains (group 'fault', filter levels ['Bumps', 'K_Scatch', 'Other_Faults', 'Pastry', 'Stains', 'Z_Scratch'])
+15:12:32 wrote /auto/brno2/brno2/vdhong/mem-propagation/data/tasks_v2real.json (240 tasks)
+checked: every stored value and counterfactual recomputed from the CSV files (240 tasks)
+step types           : {'agg': 720, 'cond_mean': 281, 'count_between': 86, 'count_gt': 199, 'diff': 60, 'pct_change': 57, 'predict': 216, 'ratio': 53, 'share_gt': 167, 'zscore': 81}
+max depth per task   : {2: 155, 3: 65, 4: 16, 5: 4}
+injection points/task: min 2  mean 3.86  max 7  total 927
+moved descendants    : mean 1.83 per injection point
+rows per table       : 150-30000
+tasks per dataset    : {'iris': 40, 'wine': 40, 'diabetes': 40, 'heart': 40, 'credit': 40, 'steel': 40}
+same_chains_as v1real: identical tables, steps, true values and injection points; wording changed in {'predict': 216} steps

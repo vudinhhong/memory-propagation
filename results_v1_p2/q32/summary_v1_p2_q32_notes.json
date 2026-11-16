@@ -1,0 +1,625 @@
+{
+ "name": "v1_p2_q32_notes",
+ "taskset": "v1",
+ "agent_version": "p2",
+ "model_key": "q32",
+ "model_id": "Qwen/Qwen2.5-32B-Instruct",
+ "memcond": "notes",
+ "backend": "vllm",
+ "vllm": "0.20.1",
+ "n_tasks": 240,
+ "clean_step_accuracy": 0.8427083333333333,
+ "n_injection_points": 803,
+ "n_forks": 2100,
+ "skipped_injection_points": [
+  {
+   "task": "t004",
+   "k": 6,
+   "answer": 1176.6559303457955
+  },
+  {
+   "task": "t005",
+   "k": 4,
+   "answer": 31.475438390646623
+  },
+  {
+   "task": "t005",
+   "k": 5,
+   "answer": 918.0
+  },
+  {
+   "task": "t010",
+   "k": 5,
+   "answer": -612.8416666349674
+  },
+  {
+   "task": "t011",
+   "k": 5,
+   "answer": 154.0
+  },
+  {
+   "task": "t011",
+   "k": 6,
+   "answer": 469.0
+  },
+  {
+   "task": "t012",
+   "k": 7,
+   "answer": 399.89071232481376
+  },
+  {
+   "task": "t017",
+   "k": 6,
+   "answer": 4963.55865080442
+  },
+  {
+   "task": "t019",
+   "k": 7,
+   "answer": -1.6653350429400835
+  },
+  {
+   "task": "t028",
+   "k": 5,
+   "answer": 43.405622254696304
+  },
+  {
+   "task": "t028",
+   "k": 6,
+   "answer": 52.0
+  },
+  {
+   "task": "t028",
+   "k": 7,
+   "answer": 486.0
+  },
+  {
+   "task": "t029",
+   "k": 5,
+   "answer": 2513.4011807201455
+  },
+  {
+   "task": "t029",
+   "k": 6,
+   "answer": 75174.65982931897
+  },
+  {
+   "task": "t030",
+   "k": 4,
+   "answer": 2079.480083706599
+  },
+  {
+   "task": "t034",
+   "k": 4,
+   "answer": 67.4607463719847
+  },
+  {
+   "task": "t035",
+   "k": 6,
+   "answer": 2560.55374603437
+  },
+  {
+   "task": "t036",
+   "k": 4,
+   "answer": 58.816277434235595
+  },
+  {
+   "task": "t036",
+   "k": 5,
+   "answer": 42.161637931034484
+  },
+  {
+   "task": "t038",
+   "k": 6,
+   "answer": 9595.46436270574
+  },
+  {
+   "task": "t038",
+   "k": 7,
+   "answer": 158280.3241675431
+  },
+  {
+   "task": "t045",
+   "k": 5,
+   "answer": 65.1966644432403
+  },
+  {
+   "task": "t045",
+   "k": 6,
+   "answer": 63.36302379125095
+  },
+  {
+   "task": "t046",
+   "k": 6,
+   "answer": 28.18097109228648
+  },
+  {
+   "task": "t046",
+   "k": 7,
+   "answer": 209.0
+  },
+  {
+   "task": "t053",
+   "k": 5,
+   "answer": 2850.6755856278232
+  },
+  {
+   "task": "t053",
+   "k": 6,
+   "answer": 0.0
+  },
+  {
+   "task": "t054",
+   "k": 4,
+   "answer": 0.4427922216103596
+  },
+  {
+   "task": "t056",
+   "k": 5,
+   "answer": 51.567240991206084
+  },
+  {
+   "task": "t060",
+   "k": 5,
+   "answer": 1217.7492134390425
+  },
+  {
+   "task": "t066",
+   "k": 6,
+   "answer": 683.9641217473647
+  },
+  {
+   "task": "t068",
+   "k": 4,
+   "answer": 235.00615058570764
+  },
+  {
+   "task": "t068",
+   "k": 5,
+   "answer": 661.0
+  },
+  {
+   "task": "t074",
+   "k": 7,
+   "answer": 15.899249357565465
+  },
+  {
+   "task": "t077",
+   "k": 6,
+   "answer": 51.75944671564852
+  },
+  {
+   "task": "t078",
+   "k": 5,
+   "answer": 5649.795760525132
+  },
+  {
+   "task": "t081",
+   "k": 5,
+   "answer": 1977.049871383657
+  },
+  {
+   "task": "t081",
+   "k": 6,
+   "answer": null
+  },
+  {
+   "task": "t083",
+   "k": 6,
+   "answer": null
+  },
+  {
+   "task": "t087",
+   "k": 4,
+   "answer": 61.49832767914855
+  },
+  {
+   "task": "t087",
+   "k": 5,
+   "answer": 35.98216159496327
+  },
+  {
+   "task": "t093",
+   "k": 7,
+   "answer": 47.2823004564105
+  },
+  {
+   "task": "t096",
+   "k": 5,
+   "answer": 1765.1797469418996
+  },
+  {
+   "task": "t096",
+   "k": 6,
+   "answer": 573402.0058346294
+  },
+  {
+   "task": "t097",
+   "k": 6,
+   "answer": 429.54787759131295
+  },
+  {
+   "task": "t097",
+   "k": 7,
+   "answer": 313.7650106446876
+  },
+  {
+   "task": "t098",
+   "k": 5,
+   "answer": 3387.242395000966
+  },
+  {
+   "task": "t100",
+   "k": 7,
+   "answer": 75.27570128088463
+  },
+  {
+   "task": "t101",
+   "k": 7,
+   "answer": 74.20103163685565
+  },
+  {
+   "task": "t102",
+   "k": 5,
+   "answer": 12893.546238255885
+  },
+  {
+   "task": "t104",
+   "k": 4,
+   "answer": 52.62219672546063
+  },
+  {
+   "task": "t104",
+   "k": 5,
+   "answer": 46.291887125220455
+  },
+  {
+   "task": "t106",
+   "k": 6,
+   "answer": 2299.475100767305
+  },
+  {
+   "task": "t113",
+   "k": 5,
+   "answer": 16.753749003227192
+  },
+  {
+   "task": "t114",
+   "k": 5,
+   "answer": 7753.321590093809
+  },
+  {
+   "task": "t116",
+   "k": 5,
+   "answer": 373.44123582858543
+  },
+  {
+   "task": "t117",
+   "k": 4,
+   "answer": 42.81250363462753
+  },
+  {
+   "task": "t119",
+   "k": 5,
+   "answer": 530.7223649458505
+  },
+  {
+   "task": "t120",
+   "k": 5,
+   "answer": 837.0385629091659
+  },
+  {
+   "task": "t126",
+   "k": 4,
+   "answer": 3362.2299777120957
+  },
+  {
+   "task": "t128",
+   "k": 7,
+   "answer": 3071.6497776896185
+  },
+  {
+   "task": "t131",
+   "k": 6,
+   "answer": 68.5585657370518
+  },
+  {
+   "task": "t133",
+   "k": 6,
+   "answer": 29.410331125827813
+  },
+  {
+   "task": "t135",
+   "k": 5,
+   "answer": 69.25539530132676
+  },
+  {
+   "task": "t135",
+   "k": 7,
+   "answer": 58.94825187969925
+  },
+  {
+   "task": "t136",
+   "k": 7,
+   "answer": null
+  },
+  {
+   "task": "t137",
+   "k": 7,
+   "answer": 423.8157860374163
+  },
+  {
+   "task": "t140",
+   "k": 5,
+   "answer": 5516.996189802445
+  },
+  {
+   "task": "t141",
+   "k": 5,
+   "answer": 60.45025277762932
+  },
+  {
+   "task": "t141",
+   "k": 7,
+   "answer": 309.0
+  },
+  {
+   "task": "t143",
+   "k": 7,
+   "answer": 52.87962654091793
+  },
+  {
+   "task": "t144",
+   "k": 7,
+   "answer": 17.512075680576537
+  },
+  {
+   "task": "t145",
+   "k": 6,
+   "answer": 2290.8597259202434
+  },
+  {
+   "task": "t147",
+   "k": 6,
+   "answer": 35892.46799259407
+  },
+  {
+   "task": "t154",
+   "k": 4,
+   "answer": 1271.0994486921666
+  },
+  {
+   "task": "t154",
+   "k": 6,
+   "answer": 7171.955980567109
+  },
+  {
+   "task": "t156",
+   "k": 5,
+   "answer": 586.2689886145014
+  },
+  {
+   "task": "t157",
+   "k": 5,
+   "answer": 1069.1944197868663
+  },
+  {
+   "task": "t162",
+   "k": 5,
+   "answer": 2496.587105439465
+  },
+  {
+   "task": "t163",
+   "k": 7,
+   "answer": 46.06509243941036
+  },
+  {
+   "task": "t169",
+   "k": 6,
+   "answer": 29.477322201950276
+  },
+  {
+   "task": "t169",
+   "k": 7,
+   "answer": 851.0684829660718
+  },
+  {
+   "task": "t177",
+   "k": 5,
+   "answer": 87.2658099180674
+  },
+  {
+   "task": "t178",
+   "k": 5,
+   "answer": 21467.47520896085
+  },
+  {
+   "task": "t180",
+   "k": 4,
+   "answer": 253.51147033935328
+  },
+  {
+   "task": "t187",
+   "k": 6,
+   "answer": 2827.925198425321
+  },
+  {
+   "task": "t194",
+   "k": 7,
+   "answer": 324.524283704612
+  },
+  {
+   "task": "t195",
+   "k": 6,
+   "answer": 40.802004996571505
+  },
+  {
+   "task": "t196",
+   "k": 5,
+   "answer": 58.23835263374142
+  },
+  {
+   "task": "t203",
+   "k": 7,
+   "answer": 13.025659979670966
+  },
+  {
+   "task": "t204",
+   "k": 5,
+   "answer": 67.95013959443189
+  },
+  {
+   "task": "t205",
+   "k": 7,
+   "answer": 13.377573731774667
+  },
+  {
+   "task": "t211",
+   "k": 5,
+   "answer": 2376.457820938849
+  },
+  {
+   "task": "t212",
+   "k": 7,
+   "answer": 0.37101567187244994
+  },
+  {
+   "task": "t214",
+   "k": 4,
+   "answer": 25.374136371722987
+  },
+  {
+   "task": "t214",
+   "k": 5,
+   "answer": 36.595176848874594
+  },
+  {
+   "task": "t218",
+   "k": 7,
+   "answer": 820.3779393490473
+  },
+  {
+   "task": "t219",
+   "k": 5,
+   "answer": 1258.8932609568071
+  },
+  {
+   "task": "t220",
+   "k": 7,
+   "answer": 28.261311150051448
+  },
+  {
+   "task": "t221",
+   "k": 5,
+   "answer": 3851.0148226855326
+  },
+  {
+   "task": "t222",
+   "k": 6,
+   "answer": 50.5715490495214
+  },
+  {
+   "task": "t226",
+   "k": 6,
+   "answer": null
+  },
+  {
+   "task": "t234",
+   "k": 5,
+   "answer": 41.24563530491909
+  }
+ ],
+ "prompts_too_long": 0,
+ "seconds_clean": 691,
+ "seconds_total": 2512,
+ "config": {
+  "tasksets": {
+   "v1": {
+    "kind": "synthetic",
+    "n_tasks": 240,
+    "task_seed": 20261113,
+    "results_dir": "results_v1_p2",
+    "job_prefix": ""
+   },
+   "v1real": {
+    "kind": "real",
+    "per_dataset": 40,
+    "task_seed": 20261114,
+    "results_dir": "results_v1real_p2",
+    "job_prefix": "R",
+    "datasets": [
+     "iris",
+     "wine",
+     "diabetes",
+     "heart",
+     "credit",
+     "steel"
+    ]
+   }
+  },
+  "agent_version": "p2",
+  "agent_version_note": "p1 = first run (results_v1, results_v1real): ambiguous ANSWER instruction, long data path; p2 = explicit print line + example, short read-only data copy, identical step-1 prompt",
+  "n_steps": 8,
+  "models": {
+   "q01": {
+    "id": "Qwen/Qwen2.5-1.5B-Instruct",
+    "size": "S"
+   },
+   "q03": {
+    "id": "Qwen/Qwen2.5-3B-Instruct",
+    "size": "S"
+   },
+   "q07": {
+    "id": "Qwen/Qwen2.5-7B-Instruct",
+    "size": "S"
+   },
+   "l08": {
+    "id": "meta-llama/Llama-3.1-8B-Instruct",
+    "size": "S"
+   },
+   "q14": {
+    "id": "Qwen/Qwen2.5-14B-Instruct",
+    "size": "M"
+   },
+   "q32": {
+    "id": "Qwen/Qwen2.5-32B-Instruct",
+    "size": "L"
+   }
+  },
+  "sizes": {
+   "S": {
+    "gpu_memory_utilization": 0.85,
+    "tensor_parallel_size": 1
+   },
+   "M": {
+    "gpu_memory_utilization": 0.88,
+    "tensor_parallel_size": 1
+   },
+   "L": {
+    "gpu_memory_utilization": 0.92,
+    "tensor_parallel_size": 1
+   }
+  },
+  "memconds": [
+   "nomem",
+   "notes",
+   "rawlog",
+   "fullctx"
+  ],
+  "llm_seed": 0,
+  "max_model_len": 16384,
+  "max_tokens_code": 768,
+  "max_tokens_note": 64,
+  "max_tokens_report": 320,
+  "max_attempts": 2,
+  "exec_workers": 6,
+  "exec_timeout_s": 20,
+  "exec_mem_gb": 6,
+  "stdout_shown_chars": 600,
+  "code_shown_chars": 3000,
+  "stdout_kept_chars": 1500,
+  "rtol": 0.002,
+  "atol": 0.0001,
+  "moved_factor": 10,
+  "bootstrap": 2000
+ }
+}

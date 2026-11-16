@@ -1,0 +1,1148 @@
+{
+ "name": "v2_p2_l08_rawlog",
+ "taskset": "v2",
+ "agent_version": "p2",
+ "model_key": "l08",
+ "model_id": "meta-llama/Llama-3.1-8B-Instruct",
+ "memcond": "rawlog",
+ "backend": "vllm",
+ "vllm": "0.20.1",
+ "n_tasks": 240,
+ "clean_step_accuracy": 0.6234375,
+ "n_injection_points": 803,
+ "n_forks": 1803,
+ "skipped_injection_points": [
+  {
+   "task": "t000",
+   "k": 7,
+   "answer": null
+  },
+  {
+   "task": "t004",
+   "k": 6,
+   "answer": 0.43738641166239794
+  },
+  {
+   "task": "t005",
+   "k": 4,
+   "answer": 0.09373257880361285
+  },
+  {
+   "task": "t005",
+   "k": 5,
+   "answer": 0.0
+  },
+  {
+   "task": "t005",
+   "k": 7,
+   "answer": null
+  },
+  {
+   "task": "t006",
+   "k": 5,
+   "answer": 74.69934354485777
+  },
+  {
+   "task": "t008",
+   "k": 5,
+   "answer": 2071.0
+  },
+  {
+   "task": "t010",
+   "k": 5,
+   "answer": 65.53827043022096
+  },
+  {
+   "task": "t011",
+   "k": 6,
+   "answer": 1.0
+  },
+  {
+   "task": "t012",
+   "k": 7,
+   "answer": null
+  },
+  {
+   "task": "t013",
+   "k": 4,
+   "answer": 71.75585669781931
+  },
+  {
+   "task": "t015",
+   "k": 5,
+   "answer": 137.0
+  },
+  {
+   "task": "t017",
+   "k": 6,
+   "answer": 41.113377302700464
+  },
+  {
+   "task": "t019",
+   "k": 7,
+   "answer": null
+  },
+  {
+   "task": "t020",
+   "k": 5,
+   "answer": 59.66005167958656
+  },
+  {
+   "task": "t020",
+   "k": 6,
+   "answer": 33.594573643410854
+  },
+  {
+   "task": "t025",
+   "k": 5,
+   "answer": 66.08411989795918
+  },
+  {
+   "task": "t025",
+   "k": 6,
+   "answer": 557.0
+  },
+  {
+   "task": "t025",
+   "k": 7,
+   "answer": 0.0
+  },
+  {
+   "task": "t028",
+   "k": 5,
+   "answer": 45.357476290802595
+  },
+  {
+   "task": "t028",
+   "k": 6,
+   "answer": null
+  },
+  {
+   "task": "t028",
+   "k": 7,
+   "answer": 216.0
+  },
+  {
+   "task": "t029",
+   "k": 5,
+   "answer": null
+  },
+  {
+   "task": "t029",
+   "k": 6,
+   "answer": null
+  },
+  {
+   "task": "t030",
+   "k": 4,
+   "answer": 34.31
+  },
+  {
+   "task": "t033",
+   "k": 2,
+   "answer": 74.8
+  },
+  {
+   "task": "t034",
+   "k": 4,
+   "answer": null
+  },
+  {
+   "task": "t035",
+   "k": 6,
+   "answer": 0.14554587637109456
+  },
+  {
+   "task": "t036",
+   "k": 4,
+   "answer": null
+  },
+  {
+   "task": "t036",
+   "k": 5,
+   "answer": 43.568370607028754
+  },
+  {
+   "task": "t040",
+   "k": 7,
+   "answer": 32.75375426621161
+  },
+  {
+   "task": "t042",
+   "k": 5,
+   "answer": 374.0
+  },
+  {
+   "task": "t045",
+   "k": 5,
+   "answer": null
+  },
+  {
+   "task": "t045",
+   "k": 6,
+   "answer": 73.62592920353983
+  },
+  {
+   "task": "t046",
+   "k": 6,
+   "answer": 150282.3770919136
+  },
+  {
+   "task": "t046",
+   "k": 7,
+   "answer": 1069.0
+  },
+  {
+   "task": "t047",
+   "k": 4,
+   "answer": 227.0
+  },
+  {
+   "task": "t047",
+   "k": 5,
+   "answer": 987.0
+  },
+  {
+   "task": "t047",
+   "k": 7,
+   "answer": 118.0
+  },
+  {
+   "task": "t048",
+   "k": 4,
+   "answer": 96.0
+  },
+  {
+   "task": "t048",
+   "k": 6,
+   "answer": null
+  },
+  {
+   "task": "t050",
+   "k": 6,
+   "answer": 34.30355855855856
+  },
+  {
+   "task": "t051",
+   "k": 4,
+   "answer": 451.3151041666667
+  },
+  {
+   "task": "t051",
+   "k": 5,
+   "answer": 49.05135520684736
+  },
+  {
+   "task": "t052",
+   "k": 4,
+   "answer": 195.0
+  },
+  {
+   "task": "t052",
+   "k": 7,
+   "answer": 336.0
+  },
+  {
+   "task": "t053",
+   "k": 5,
+   "answer": null
+  },
+  {
+   "task": "t053",
+   "k": 6,
+   "answer": 842.0
+  },
+  {
+   "task": "t053",
+   "k": 7,
+   "answer": 46.0
+  },
+  {
+   "task": "t054",
+   "k": 4,
+   "answer": 0.6502130535002637
+  },
+  {
+   "task": "t055",
+   "k": 6,
+   "answer": 46.66054026503568
+  },
+  {
+   "task": "t056",
+   "k": 5,
+   "answer": null
+  },
+  {
+   "task": "t058",
+   "k": 4,
+   "answer": 139.70464135021098
+  },
+  {
+   "task": "t059",
+   "k": 5,
+   "answer": null
+  },
+  {
+   "task": "t060",
+   "k": 5,
+   "answer": 0.1840120162210461
+  },
+  {
+   "task": "t061",
+   "k": 7,
+   "answer": 78.66791443850266
+  },
+  {
+   "task": "t062",
+   "k": 4,
+   "answer": null
+  },
+  {
+   "task": "t064",
+   "k": 6,
+   "answer": 0.0626420221992549
+  },
+  {
+   "task": "t064",
+   "k": 7,
+   "answer": 66.7365207373272
+  },
+  {
+   "task": "t065",
+   "k": 6,
+   "answer": 417.0558375634518
+  },
+  {
+   "task": "t065",
+   "k": 7,
+   "answer": 0.4362991513437057
+  },
+  {
+   "task": "t066",
+   "k": 6,
+   "answer": 0.0004004634395261366
+  },
+  {
+   "task": "t067",
+   "k": 5,
+   "answer": null
+  },
+  {
+   "task": "t068",
+   "k": 4,
+   "answer": null
+  },
+  {
+   "task": "t068",
+   "k": 5,
+   "answer": null
+  },
+  {
+   "task": "t069",
+   "k": 7,
+   "answer": 39.10205607476636
+  },
+  {
+   "task": "t071",
+   "k": 5,
+   "answer": 0.5190734939759036
+  },
+  {
+   "task": "t074",
+   "k": 7,
+   "answer": 0.013032494757414798
+  },
+  {
+   "task": "t075",
+   "k": 5,
+   "answer": null
+  },
+  {
+   "task": "t075",
+   "k": 7,
+   "answer": 1070.0
+  },
+  {
+   "task": "t077",
+   "k": 6,
+   "answer": 67.28075610970824
+  },
+  {
+   "task": "t078",
+   "k": 5,
+   "answer": null
+  },
+  {
+   "task": "t079",
+   "k": 5,
+   "answer": 48.285714285714285
+  },
+  {
+   "task": "t081",
+   "k": 6,
+   "answer": 35.60365974282889
+  },
+  {
+   "task": "t082",
+   "k": 6,
+   "answer": 0.5605716287215412
+  },
+  {
+   "task": "t083",
+   "k": 6,
+   "answer": null
+  },
+  {
+   "task": "t086",
+   "k": 4,
+   "answer": 0.0
+  },
+  {
+   "task": "t086",
+   "k": 5,
+   "answer": 877.0
+  },
+  {
+   "task": "t087",
+   "k": 4,
+   "answer": null
+  },
+  {
+   "task": "t087",
+   "k": 5,
+   "answer": 34.96499312242091
+  },
+  {
+   "task": "t089",
+   "k": 7,
+   "answer": 116.15957446808511
+  },
+  {
+   "task": "t093",
+   "k": 5,
+   "answer": 53.90359908883827
+  },
+  {
+   "task": "t093",
+   "k": 7,
+   "answer": 2647.3764116158663
+  },
+  {
+   "task": "t096",
+   "k": 5,
+   "answer": null
+  },
+  {
+   "task": "t096",
+   "k": 6,
+   "answer": 742.0
+  },
+  {
+   "task": "t097",
+   "k": 6,
+   "answer": 431.4990808823529
+  },
+  {
+   "task": "t097",
+   "k": 7,
+   "answer": -0.10612885837208937
+  },
+  {
+   "task": "t098",
+   "k": 5,
+   "answer": 13397.479149135112
+  },
+  {
+   "task": "t099",
+   "k": 4,
+   "answer": 42.42857142857143
+  },
+  {
+   "task": "t099",
+   "k": 5,
+   "answer": 29.6
+  },
+  {
+   "task": "t101",
+   "k": 7,
+   "answer": 16309.810739321982
+  },
+  {
+   "task": "t102",
+   "k": 5,
+   "answer": 0.09260618239069542
+  },
+  {
+   "task": "t103",
+   "k": 5,
+   "answer": null
+  },
+  {
+   "task": "t103",
+   "k": 6,
+   "answer": 1236.0
+  },
+  {
+   "task": "t104",
+   "k": 4,
+   "answer": 67.160746569447
+  },
+  {
+   "task": "t104",
+   "k": 5,
+   "answer": 47.99302649930265
+  },
+  {
+   "task": "t106",
+   "k": 6,
+   "answer": 33.30232401960339
+  },
+  {
+   "task": "t107",
+   "k": 4,
+   "answer": 439.0
+  },
+  {
+   "task": "t108",
+   "k": 7,
+   "answer": 131.1992238033635
+  },
+  {
+   "task": "t109",
+   "k": 4,
+   "answer": null
+  },
+  {
+   "task": "t110",
+   "k": 5,
+   "answer": 914.0
+  },
+  {
+   "task": "t110",
+   "k": 7,
+   "answer": 688.0
+  },
+  {
+   "task": "t111",
+   "k": 4,
+   "answer": 62.2258
+  },
+  {
+   "task": "t111",
+   "k": 5,
+   "answer": 39.903683241252295
+  },
+  {
+   "task": "t111",
+   "k": 6,
+   "answer": 337.0
+  },
+  {
+   "task": "t111",
+   "k": 7,
+   "answer": 568.0
+  },
+  {
+   "task": "t112",
+   "k": 7,
+   "answer": 60.617741935483856
+  },
+  {
+   "task": "t113",
+   "k": 5,
+   "answer": -26.759257979196263
+  },
+  {
+   "task": "t114",
+   "k": 5,
+   "answer": 23.762796614412114
+  },
+  {
+   "task": "t116",
+   "k": 5,
+   "answer": null
+  },
+  {
+   "task": "t117",
+   "k": 4,
+   "answer": null
+  },
+  {
+   "task": "t118",
+   "k": 4,
+   "answer": 19.4465243902439
+  },
+  {
+   "task": "t119",
+   "k": 5,
+   "answer": 56.70535635340138
+  },
+  {
+   "task": "t120",
+   "k": 5,
+   "answer": 34.14009908790031
+  },
+  {
+   "task": "t122",
+   "k": 5,
+   "answer": 385.0
+  },
+  {
+   "task": "t122",
+   "k": 6,
+   "answer": null
+  },
+  {
+   "task": "t123",
+   "k": 5,
+   "answer": null
+  },
+  {
+   "task": "t123",
+   "k": 7,
+   "answer": 251.0
+  },
+  {
+   "task": "t126",
+   "k": 4,
+   "answer": 3.0093417478196374
+  },
+  {
+   "task": "t128",
+   "k": 7,
+   "answer": -3.8166571962423577
+  },
+  {
+   "task": "t129",
+   "k": 5,
+   "answer": null
+  },
+  {
+   "task": "t131",
+   "k": 6,
+   "answer": 68.302752293578
+  },
+  {
+   "task": "t132",
+   "k": 5,
+   "answer": null
+  },
+  {
+   "task": "t132",
+   "k": 6,
+   "answer": 36.421348314606746
+  },
+  {
+   "task": "t135",
+   "k": 5,
+   "answer": 0.0027177078534798894
+  },
+  {
+   "task": "t135",
+   "k": 7,
+   "answer": 62.71176470588236
+  },
+  {
+   "task": "t136",
+   "k": 7,
+   "answer": 42.38207317073171
+  },
+  {
+   "task": "t138",
+   "k": 4,
+   "answer": null
+  },
+  {
+   "task": "t140",
+   "k": 5,
+   "answer": 68.4284649204164
+  },
+  {
+   "task": "t141",
+   "k": 4,
+   "answer": null
+  },
+  {
+   "task": "t141",
+   "k": 7,
+   "answer": 89.0
+  },
+  {
+   "task": "t145",
+   "k": 4,
+   "answer": 45.74424898511502
+  },
+  {
+   "task": "t145",
+   "k": 6,
+   "answer": null
+  },
+  {
+   "task": "t146",
+   "k": 6,
+   "answer": 5.0
+  },
+  {
+   "task": "t147",
+   "k": 6,
+   "answer": 60.6920781290674
+  },
+  {
+   "task": "t148",
+   "k": 5,
+   "answer": null
+  },
+  {
+   "task": "t151",
+   "k": 7,
+   "answer": 33.457121212121216
+  },
+  {
+   "task": "t152",
+   "k": 6,
+   "answer": 72.10719178082192
+  },
+  {
+   "task": "t153",
+   "k": 7,
+   "answer": 24.4
+  },
+  {
+   "task": "t154",
+   "k": 4,
+   "answer": null
+  },
+  {
+   "task": "t154",
+   "k": 6,
+   "answer": null
+  },
+  {
+   "task": "t156",
+   "k": 5,
+   "answer": 44.6831496734515
+  },
+  {
+   "task": "t157",
+   "k": 5,
+   "answer": 3560.3034333516484
+  },
+  {
+   "task": "t160",
+   "k": 6,
+   "answer": 70.36223908918404
+  },
+  {
+   "task": "t162",
+   "k": 5,
+   "answer": 62.55880395850445
+  },
+  {
+   "task": "t163",
+   "k": 7,
+   "answer": 0.08848365408273078
+  },
+  {
+   "task": "t164",
+   "k": 5,
+   "answer": 58.810317124735725
+  },
+  {
+   "task": "t164",
+   "k": 6,
+   "answer": 0.0
+  },
+  {
+   "task": "t164",
+   "k": 7,
+   "answer": 0.0
+  },
+  {
+   "task": "t165",
+   "k": 5,
+   "answer": null
+  },
+  {
+   "task": "t169",
+   "k": 7,
+   "answer": 1544.6535056635164
+  },
+  {
+   "task": "t171",
+   "k": 5,
+   "answer": 75.64952380952381
+  },
+  {
+   "task": "t172",
+   "k": 6,
+   "answer": 434.8951175406872
+  },
+  {
+   "task": "t173",
+   "k": 5,
+   "answer": 132.0
+  },
+  {
+   "task": "t173",
+   "k": 7,
+   "answer": 67.0
+  },
+  {
+   "task": "t178",
+   "k": 5,
+   "answer": 61.05477946440498
+  },
+  {
+   "task": "t180",
+   "k": 4,
+   "answer": null
+  },
+  {
+   "task": "t184",
+   "k": 4,
+   "answer": 33.25051282051282
+  },
+  {
+   "task": "t186",
+   "k": 6,
+   "answer": 79.68780487804878
+  },
+  {
+   "task": "t187",
+   "k": 4,
+   "answer": 43.91517412935324
+  },
+  {
+   "task": "t187",
+   "k": 6,
+   "answer": 0.2403909545833938
+  },
+  {
+   "task": "t191",
+   "k": 4,
+   "answer": 24.0
+  },
+  {
+   "task": "t192",
+   "k": 7,
+   "answer": 55.3315
+  },
+  {
+   "task": "t195",
+   "k": 6,
+   "answer": null
+  },
+  {
+   "task": "t196",
+   "k": 5,
+   "answer": null
+  },
+  {
+   "task": "t197",
+   "k": 5,
+   "answer": 293.0
+  },
+  {
+   "task": "t198",
+   "k": 6,
+   "answer": 0.631
+  },
+  {
+   "task": "t199",
+   "k": 4,
+   "answer": 179.0
+  },
+  {
+   "task": "t203",
+   "k": 7,
+   "answer": null
+  },
+  {
+   "task": "t204",
+   "k": 5,
+   "answer": 0.4392369962332474
+  },
+  {
+   "task": "t206",
+   "k": 5,
+   "answer": null
+  },
+  {
+   "task": "t206",
+   "k": 6,
+   "answer": 123.0
+  },
+  {
+   "task": "t206",
+   "k": 7,
+   "answer": 0.0
+  },
+  {
+   "task": "t207",
+   "k": 4,
+   "answer": 593.0
+  },
+  {
+   "task": "t207",
+   "k": 5,
+   "answer": null
+  },
+  {
+   "task": "t209",
+   "k": 5,
+   "answer": null
+  },
+  {
+   "task": "t209",
+   "k": 6,
+   "answer": 269.0
+  },
+  {
+   "task": "t211",
+   "k": 5,
+   "answer": -0.16539107546830575
+  },
+  {
+   "task": "t212",
+   "k": 6,
+   "answer": 42.25
+  },
+  {
+   "task": "t212",
+   "k": 7,
+   "answer": null
+  },
+  {
+   "task": "t213",
+   "k": 7,
+   "answer": 35.79835255354201
+  },
+  {
+   "task": "t215",
+   "k": 7,
+   "answer": 60.78413944125255
+  },
+  {
+   "task": "t218",
+   "k": 2,
+   "answer": 0.4102
+  },
+  {
+   "task": "t218",
+   "k": 7,
+   "answer": 36.37214877751659
+  },
+  {
+   "task": "t219",
+   "k": 5,
+   "answer": null
+  },
+  {
+   "task": "t220",
+   "k": 4,
+   "answer": 70.76428571428572
+  },
+  {
+   "task": "t220",
+   "k": 7,
+   "answer": 0.14102168123946324
+  },
+  {
+   "task": "t221",
+   "k": 5,
+   "answer": 0.08774658511497974
+  },
+  {
+   "task": "t222",
+   "k": 6,
+   "answer": 0.002882455728075432
+  },
+  {
+   "task": "t225",
+   "k": 4,
+   "answer": 72.70321678321679
+  },
+  {
+   "task": "t226",
+   "k": 6,
+   "answer": 62.08839398350316
+  },
+  {
+   "task": "t227",
+   "k": 5,
+   "answer": 39.54054054054054
+  },
+  {
+   "task": "t228",
+   "k": 6,
+   "answer": 29.828060548722803
+  },
+  {
+   "task": "t229",
+   "k": 4,
+   "answer": null
+  },
+  {
+   "task": "t229",
+   "k": 7,
+   "answer": 66.50705583756344
+  },
+  {
+   "task": "t233",
+   "k": 4,
+   "answer": 428.0
+  },
+  {
+   "task": "t234",
+   "k": 4,
+   "answer": null
+  },
+  {
+   "task": "t234",
+   "k": 5,
+   "answer": 32.01922826640788
+  },
+  {
+   "task": "t235",
+   "k": 4,
+   "answer": null
+  },
+  {
+   "task": "t235",
+   "k": 6,
+   "answer": 42.61057692307692
+  },
+  {
+   "task": "t235",
+   "k": 7,
+   "answer": 420.0
+  },
+  {
+   "task": "t236",
+   "k": 6,
+   "answer": 32.11052631578948
+  }
+ ],
+ "prompts_too_long": 0,
+ "seconds_clean": 191,
+ "seconds_total": 766,
+ "config": {
+  "tasksets": {
+   "v1": {
+    "kind": "synthetic",
+    "n_tasks": 240,
+    "task_seed": 20261113,
+    "results_dir": "results_v1_p2",
+    "job_prefix": "",
+    "predict_wording": "ab"
+   },
+   "v1real": {
+    "kind": "real",
+    "per_dataset": 40,
+    "task_seed": 20261114,
+    "results_dir": "results_v1real_p2",
+    "job_prefix": "R",
+    "datasets": [
+     "iris",
+     "wine",
+     "diabetes",
+     "heart",
+     "credit",
+     "steel"
+    ],
+    "predict_wording": "ab"
+   },
+   "v2": {
+    "kind": "synthetic",
+    "n_tasks": 240,
+    "task_seed": 20261113,
+    "results_dir": "results_v2_p2",
+    "job_prefix": "V",
+    "predict_wording": "plain",
+    "same_chains_as": "v1"
+   },
+   "v2real": {
+    "kind": "real",
+    "per_dataset": 40,
+    "task_seed": 20261114,
+    "results_dir": "results_v2real_p2",
+    "job_prefix": "VR",
+    "datasets": [
+     "iris",
+     "wine",
+     "diabetes",
+     "heart",
+     "credit",
+     "steel"
+    ],
+    "predict_wording": "plain",
+    "same_chains_as": "v1real"
+   }
+  },
+  "agent_version": "p2",
+  "agent_version_note": "p1 = first run (results_v1, results_v1real): ambiguous ANSWER instruction, long data path; p2 = explicit print line + example, short read-only data copy, identical step-1 prompt",
+  "n_steps": 8,
+  "models": {
+   "q01": {
+    "id": "Qwen/Qwen2.5-1.5B-Instruct",
+    "size": "S"
+   },
+   "q03": {
+    "id": "Qwen/Qwen2.5-3B-Instruct",
+    "size": "S"
+   },
+   "q07": {
+    "id": "Qwen/Qwen2.5-7B-Instruct",
+    "size": "S"
+   },
+   "l08": {
+    "id": "meta-llama/Llama-3.1-8B-Instruct",
+    "size": "S"
+   },
+   "q14": {
+    "id": "Qwen/Qwen2.5-14B-Instruct",
+    "size": "M"
+   },
+   "q32": {
+    "id": "Qwen/Qwen2.5-32B-Instruct",
+    "size": "L"
+   }
+  },
+  "sizes": {
+   "S": {
+    "gpu_memory_utilization": 0.85,
+    "tensor_parallel_size": 1
+   },
+   "M": {
+    "gpu_memory_utilization": 0.88,
+    "tensor_parallel_size": 1
+   },
+   "L": {
+    "gpu_memory_utilization": 0.92,
+    "tensor_parallel_size": 1
+   }
+  },
+  "memconds": [
+   "nomem",
+   "notes",
+   "rawlog",
+   "fullctx"
+  ],
+  "llm_seed": 0,
+  "max_model_len": 16384,
+  "max_tokens_code": 768,
+  "max_tokens_note": 64,
+  "max_tokens_report": 320,
+  "max_attempts": 2,
+  "exec_workers": 6,
+  "exec_timeout_s": 20,
+  "exec_mem_gb": 6,
+  "stdout_shown_chars": 600,
+  "code_shown_chars": 3000,
+  "stdout_kept_chars": 1500,
+  "rtol": 0.002,
+  "atol": 0.0001,
+  "moved_factor": 10,
+  "bootstrap": 2000
+ }
+}

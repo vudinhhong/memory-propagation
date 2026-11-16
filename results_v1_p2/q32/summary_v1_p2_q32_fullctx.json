@@ -1,0 +1,165 @@
+{
+ "name": "v1_p2_q32_fullctx",
+ "taskset": "v1",
+ "agent_version": "p2",
+ "model_key": "q32",
+ "model_id": "Qwen/Qwen2.5-32B-Instruct",
+ "memcond": "fullctx",
+ "backend": "vllm",
+ "vllm": "0.20.1",
+ "n_tasks": 240,
+ "clean_step_accuracy": 0.9828125,
+ "n_injection_points": 803,
+ "n_forks": 2376,
+ "skipped_injection_points": [
+  {
+   "task": "t038",
+   "k": 6,
+   "answer": 9595.46436270574
+  },
+  {
+   "task": "t038",
+   "k": 7,
+   "answer": 158280.3301504909
+  },
+  {
+   "task": "t048",
+   "k": 6,
+   "answer": 40.0
+  },
+  {
+   "task": "t074",
+   "k": 7,
+   "answer": 15.899249357565465
+  },
+  {
+   "task": "t106",
+   "k": 6,
+   "answer": 2299.475100767305
+  },
+  {
+   "task": "t162",
+   "k": 5,
+   "answer": 2496.587105439465
+  },
+  {
+   "task": "t169",
+   "k": 6,
+   "answer": 2272.5784652239013
+  },
+  {
+   "task": "t169",
+   "k": 7,
+   "answer": 65607.75935319469
+  },
+  {
+   "task": "t193",
+   "k": 4,
+   "answer": 20262.337672334015
+  },
+  {
+   "task": "t196",
+   "k": 5,
+   "answer": 2674.1617719477385
+  },
+  {
+   "task": "t203",
+   "k": 7,
+   "answer": 13.025659979670966
+  }
+ ],
+ "prompts_too_long": 0,
+ "seconds_clean": 801,
+ "seconds_total": 3600,
+ "config": {
+  "tasksets": {
+   "v1": {
+    "kind": "synthetic",
+    "n_tasks": 240,
+    "task_seed": 20261113,
+    "results_dir": "results_v1_p2",
+    "job_prefix": ""
+   },
+   "v1real": {
+    "kind": "real",
+    "per_dataset": 40,
+    "task_seed": 20261114,
+    "results_dir": "results_v1real_p2",
+    "job_prefix": "R",
+    "datasets": [
+     "iris",
+     "wine",
+     "diabetes",
+     "heart",
+     "credit",
+     "steel"
+    ]
+   }
+  },
+  "agent_version": "p2",
+  "agent_version_note": "p1 = first run (results_v1, results_v1real): ambiguous ANSWER instruction, long data path; p2 = explicit print line + example, short read-only data copy, identical step-1 prompt",
+  "n_steps": 8,
+  "models": {
+   "q01": {
+    "id": "Qwen/Qwen2.5-1.5B-Instruct",
+    "size": "S"
+   },
+   "q03": {
+    "id": "Qwen/Qwen2.5-3B-Instruct",
+    "size": "S"
+   },
+   "q07": {
+    "id": "Qwen/Qwen2.5-7B-Instruct",
+    "size": "S"
+   },
+   "l08": {
+    "id": "meta-llama/Llama-3.1-8B-Instruct",
+    "size": "S"
+   },
+   "q14": {
+    "id": "Qwen/Qwen2.5-14B-Instruct",
+    "size": "M"
+   },
+   "q32": {
+    "id": "Qwen/Qwen2.5-32B-Instruct",
+    "size": "L"
+   }
+  },
+  "sizes": {
+   "S": {
+    "gpu_memory_utilization": 0.85,
+    "tensor_parallel_size": 1
+   },
+   "M": {
+    "gpu_memory_utilization": 0.88,
+    "tensor_parallel_size": 1
+   },
+   "L": {
+    "gpu_memory_utilization": 0.92,
+    "tensor_parallel_size": 1
+   }
+  },
+  "memconds": [
+   "nomem",
+   "notes",
+   "rawlog",
+   "fullctx"
+  ],
+  "llm_seed": 0,
+  "max_model_len": 16384,
+  "max_tokens_code": 768,
+  "max_tokens_note": 64,
+  "max_tokens_report": 320,
+  "max_attempts": 2,
+  "exec_workers": 6,
+  "exec_timeout_s": 20,
+  "exec_mem_gb": 6,
+  "stdout_shown_chars": 600,
+  "code_shown_chars": 3000,
+  "stdout_kept_chars": 1500,
+  "rtol": 0.002,
+  "atol": 0.0001,
+  "moved_factor": 10,
+  "bootstrap": 2000
+ }
+}

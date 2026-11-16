@@ -1,0 +1,721 @@
+finished: l08_nomem l08_notes l08_rawlog l08_fullctx q01_nomem q01_notes q01_rawlog q01_fullctx q03_nomem q03_notes q03_rawlog q03_fullctx q07_nomem q07_notes q07_rawlog q07_fullctx q14_nomem q14_notes q14_rawlog q14_fullctx q32_nomem q32_notes q32_rawlog q32_fullctx
+task set v2real, agent p2; runs: l08_nomem l08_notes l08_rawlog l08_fullctx q01_nomem q01_notes q01_rawlog q01_fullctx q03_nomem q03_notes q03_rawlog q03_fullctx q07_nomem q07_notes q07_rawlog q07_fullctx q14_nomem q14_notes q14_rawlog q14_fullctx q32_nomem q32_notes q32_rawlog q32_fullctx
+Numbers are percentages; [95% bootstrap interval]; n = tasks; resampled by dataset, then by task within dataset.
+
+====================================================================================================
+1. Clean runs: step accuracy, failure, note fidelity, report accuracy
+====================================================================================================
+
+l08 / fullctx
+  step accuracy                  79.4 [  76.2,   82.3] (n=240, 6 datasets)
+  step without answer             6.6 [   4.8,    8.5] (n=240, 6 datasets)
+  prompt too long                 0.0 [   0.0,    0.0] (n=240, 6 datasets)
+  report accuracy                79.3 [  76.0,   82.2] (n=240, 6 datasets)
+  report = step answer           93.2 [  91.1,   95.1] (n=240, 6 datasets)
+
+l08 / nomem
+  step accuracy                  61.9 [  59.6,   64.0] (n=240, 6 datasets)
+  step without answer             6.0 [   4.6,    7.4] (n=240, 6 datasets)
+  prompt too long                 0.0 [   0.0,    0.0] (n=240, 6 datasets)
+
+l08 / notes
+  step accuracy                  73.4 [  70.5,   76.2] (n=240, 6 datasets)
+  step without answer             4.8 [   3.3,    6.5] (n=240, 6 datasets)
+  prompt too long                 0.0 [   0.0,    0.0] (n=240, 6 datasets)
+  note = script output           99.9 [  99.8,  100.0] (n=240, 6 datasets)
+  report accuracy                73.3 [  70.2,   76.1] (n=240, 6 datasets)
+  report = step answer           94.7 [  93.0,   96.4] (n=240, 6 datasets)
+
+l08 / rawlog
+  step accuracy                  62.5 [  60.2,   64.8] (n=240, 6 datasets)
+  step without answer             4.6 [   3.5,    5.9] (n=240, 6 datasets)
+  prompt too long                 0.0 [   0.0,    0.0] (n=240, 6 datasets)
+  report accuracy                62.4 [  60.2,   64.8] (n=240, 6 datasets)
+  report = step answer           95.1 [  93.6,   96.4] (n=240, 6 datasets)
+
+q01 / fullctx
+  step accuracy                  41.6 [  38.5,   44.8] (n=240, 6 datasets)
+  step without answer            24.5 [  20.6,   28.7] (n=240, 6 datasets)
+  prompt too long                 0.0 [   0.0,    0.0] (n=240, 6 datasets)
+  report accuracy                42.6 [  39.2,   45.9] (n=240, 6 datasets)
+  report = step answer           73.5 [  69.1,   77.7] (n=240, 6 datasets)
+
+q01 / nomem
+  step accuracy                  45.3 [  42.3,   48.2] (n=240, 6 datasets)
+  step without answer            19.0 [  15.8,   22.3] (n=240, 6 datasets)
+  prompt too long                 0.0 [   0.0,    0.0] (n=240, 6 datasets)
+
+q01 / notes
+  step accuracy                  47.6 [  43.7,   51.1] (n=240, 6 datasets)
+  step without answer            15.7 [  12.1,   19.5] (n=240, 6 datasets)
+  prompt too long                 0.0 [   0.0,    0.0] (n=240, 6 datasets)
+  note = script output           95.7 [  93.5,   97.3] (n=240, 6 datasets)
+  report accuracy                46.7 [  42.9,   50.2] (n=240, 6 datasets)
+  report = step answer           78.8 [  74.5,   82.3] (n=240, 6 datasets)
+
+q01 / rawlog
+  step accuracy                  43.5 [  39.9,   46.9] (n=240, 6 datasets)
+  step without answer            19.1 [  14.6,   24.2] (n=240, 6 datasets)
+  prompt too long                 0.0 [   0.0,    0.0] (n=240, 6 datasets)
+  report accuracy                38.6 [  35.4,   41.8] (n=240, 6 datasets)
+  report = step answer           65.6 [  60.9,   69.7] (n=240, 6 datasets)
+
+q03 / fullctx
+  step accuracy                  65.3 [  61.7,   68.8] (n=240, 6 datasets)
+  step without answer            14.5 [  11.1,   18.0] (n=240, 6 datasets)
+  prompt too long                 0.0 [   0.0,    0.0] (n=240, 6 datasets)
+  report accuracy                65.4 [  61.8,   68.9] (n=240, 6 datasets)
+  report = step answer           84.7 [  81.2,   88.0] (n=240, 6 datasets)
+
+q03 / nomem
+  step accuracy                  55.5 [  52.1,   58.9] (n=240, 6 datasets)
+  step without answer            16.9 [  14.3,   19.4] (n=240, 6 datasets)
+  prompt too long                 0.0 [   0.0,    0.0] (n=240, 6 datasets)
+
+q03 / notes
+  step accuracy                  54.8 [  51.5,   58.2] (n=240, 6 datasets)
+  step without answer            15.8 [  13.4,   18.4] (n=240, 6 datasets)
+  prompt too long                 0.0 [   0.0,    0.0] (n=240, 6 datasets)
+  note = script output           99.7 [  99.2,  100.0] (n=240, 6 datasets)
+  report accuracy                53.6 [  50.2,   57.1] (n=240, 6 datasets)
+  report = step answer           82.2 [  79.4,   85.1] (n=240, 6 datasets)
+
+q03 / rawlog
+  step accuracy                  53.3 [  49.8,   56.4] (n=240, 6 datasets)
+  step without answer            16.1 [  13.8,   18.8] (n=240, 6 datasets)
+  prompt too long                 0.0 [   0.0,    0.0] (n=240, 6 datasets)
+  report accuracy                53.2 [  49.8,   56.4] (n=240, 6 datasets)
+  report = step answer           82.8 [  80.3,   85.2] (n=240, 6 datasets)
+
+q07 / fullctx
+  step accuracy                  90.5 [  87.9,   92.8] (n=240, 6 datasets)
+  step without answer             1.8 [   0.9,    2.7] (n=240, 6 datasets)
+  prompt too long                 0.0 [   0.0,    0.0] (n=240, 6 datasets)
+  report accuracy                90.5 [  87.9,   92.9] (n=240, 6 datasets)
+  report = step answer           98.2 [  97.2,   99.1] (n=240, 6 datasets)
+
+q07 / nomem
+  step accuracy                  75.3 [  71.6,   79.2] (n=240, 6 datasets)
+  step without answer             5.1 [   3.6,    6.9] (n=240, 6 datasets)
+  prompt too long                 0.0 [   0.0,    0.0] (n=240, 6 datasets)
+
+q07 / notes
+  step accuracy                  79.3 [  76.0,   82.6] (n=240, 6 datasets)
+  step without answer             2.5 [   1.4,    4.0] (n=240, 6 datasets)
+  prompt too long                 0.0 [   0.0,    0.0] (n=240, 6 datasets)
+  note = script output           97.6 [  95.6,   99.4] (n=240, 6 datasets)
+  report accuracy                78.0 [  73.8,   82.1] (n=240, 6 datasets)
+  report = step answer           95.1 [  92.0,   97.7] (n=240, 6 datasets)
+
+q07 / rawlog
+  step accuracy                  79.3 [  76.4,   82.1] (n=240, 6 datasets)
+  step without answer             2.0 [   1.2,    2.9] (n=240, 6 datasets)
+  prompt too long                 0.0 [   0.0,    0.0] (n=240, 6 datasets)
+  report accuracy                79.3 [  76.2,   82.2] (n=240, 6 datasets)
+  report = step answer           97.9 [  96.9,   98.8] (n=240, 6 datasets)
+
+q14 / fullctx
+  step accuracy                  97.8 [  96.4,   98.9] (n=240, 6 datasets)
+  step without answer             0.2 [   0.0,    0.6] (n=240, 6 datasets)
+  prompt too long                 0.0 [   0.0,    0.0] (n=240, 6 datasets)
+  report accuracy                97.8 [  96.4,   98.9] (n=240, 6 datasets)
+  report = step answer           99.8 [  99.4,  100.0] (n=240, 6 datasets)
+
+q14 / nomem
+  step accuracy                  91.6 [  89.3,   93.6] (n=240, 6 datasets)
+  step without answer             1.6 [   1.0,    2.3] (n=240, 6 datasets)
+  prompt too long                 0.0 [   0.0,    0.0] (n=240, 6 datasets)
+
+q14 / notes
+  step accuracy                  93.3 [  90.9,   95.6] (n=240, 6 datasets)
+  step without answer             0.2 [   0.0,    0.6] (n=240, 6 datasets)
+  prompt too long                 0.0 [   0.0,    0.0] (n=240, 6 datasets)
+  note = script output          100.0 [ 100.0,  100.0] (n=240, 6 datasets)
+  report accuracy                93.2 [  90.8,   95.5] (n=240, 6 datasets)
+  report = step answer           99.7 [  99.3,  100.0] (n=240, 6 datasets)
+
+q14 / rawlog
+  step accuracy                  95.6 [  93.8,   97.3] (n=240, 6 datasets)
+  step without answer             0.2 [   0.0,    0.4] (n=240, 6 datasets)
+  prompt too long                 0.0 [   0.0,    0.0] (n=240, 6 datasets)
+  report accuracy                95.6 [  93.8,   97.3] (n=240, 6 datasets)
+  report = step answer           99.8 [  99.6,  100.0] (n=240, 6 datasets)
+
+q32 / fullctx
+  step accuracy                  99.4 [  98.4,   99.9] (n=240, 6 datasets)
+  step without answer             0.0 [   0.0,    0.0] (n=240, 6 datasets)
+  prompt too long                 0.0 [   0.0,    0.0] (n=240, 6 datasets)
+  report accuracy                99.4 [  98.4,   99.9] (n=240, 6 datasets)
+  report = step answer          100.0 [ 100.0,  100.0] (n=240, 6 datasets)
+
+q32 / nomem
+  step accuracy                  95.3 [  93.0,   97.3] (n=240, 6 datasets)
+  step without answer             0.4 [   0.1,    0.8] (n=240, 6 datasets)
+  prompt too long                 0.0 [   0.0,    0.0] (n=240, 6 datasets)
+
+q32 / notes
+  step accuracy                  96.1 [  93.3,   98.2] (n=240, 6 datasets)
+  step without answer             0.3 [   0.0,    0.6] (n=240, 6 datasets)
+  prompt too long                 0.0 [   0.0,    0.0] (n=240, 6 datasets)
+  note = script output           99.9 [  99.7,  100.0] (n=240, 6 datasets)
+  report accuracy                96.2 [  93.4,   98.3] (n=240, 6 datasets)
+  report = step answer           99.7 [  99.3,  100.0] (n=240, 6 datasets)
+
+q32 / rawlog
+  step accuracy                  97.8 [  96.1,   99.2] (n=240, 6 datasets)
+  step without answer             0.1 [   0.0,    0.3] (n=240, 6 datasets)
+  prompt too long                 0.0 [   0.0,    0.0] (n=240, 6 datasets)
+  report accuracy                97.6 [  96.0,   99.1] (n=240, 6 datasets)
+  report = step answer           99.7 [  99.1,  100.0] (n=240, 6 datasets)
+
+====================================================================================================
+2. Forks: effect of one wrong value in the record of step k on the steps that depend on it
+   wrong = answer is not the correct value; prop = answer equals the counterfactual value
+   (computed from the injected number). Measured on descendants that the injection moves.
+====================================================================================================
+
+l08 / fullctx   forks: {'null': 793, 'sham': 793, 'inject': 793}   tasks: 238
+  wrong                              null  31.4  sham  31.8  inject  56.5   inject-sham   24.6 [  19.7,   29.5] (n=238, 6 datasets)
+  prop (= counterfactual)            null   0.3  sham   0.3  inject  26.5   inject-sham   26.1 [  20.5,   31.8] (n=238, 6 datasets)
+  wrong, direct child                null  28.5  sham  28.9  inject  54.3   inject-sham   25.4 [  20.2,   30.4] (n=238, 6 datasets)
+  wrong, deeper descendant           null  49.5  sham  52.6  inject  76.9   inject-sham   24.3 [  15.9,   33.8] (n=169, 6 datasets)
+  wrong, non-descendant              null  20.0  sham  20.0  inject  19.9   inject-sham   -0.0 [  -1.6,    1.5] (n=233, 6 datasets)
+  value copied as literal            null   n/a  sham  27.5  inject  29.4   inject-sham    1.9 [  -0.5,    4.5] (n=238, 6 datasets)
+  step without answer                null   7.8  sham   7.7  inject   8.3   inject-sham    0.6 [  -0.2,    1.4] (n=238, 6 datasets)
+  report: step k = w                 null   0.0  sham   0.0  inject 100.0   inject-sham  100.0 [ 100.0,  100.0] (n=238, 6 datasets)
+  report: step k correct             null 100.0  sham 100.0  inject   0.0   inject-sham -100.0 [-100.0, -100.0] (n=238, 6 datasets)
+  report: descendant wrong           null  31.6  sham  32.0  inject  57.1   inject-sham   25.1 [  19.9,   30.1] (n=238, 6 datasets)
+  report: descendant = counterfactual null   0.4  sham   0.4  inject  26.8   inject-sham   26.4 [  20.7,   32.2] (n=238, 6 datasets)
+  inject = cf | sham correct           33.6 [  26.4,   40.3] (n=225, 6 datasets)
+  inject correct | sham correct        63.2 [  55.9,   70.8] (n=225, 6 datasets)
+  null fork differs from clean run      7.8 [   5.2,   11.0] (n=238, 6 datasets)
+  inject-sham wrong, k is a root step (depth 0)   19.5 [  14.5,   24.6] (n=233, 6 datasets)
+  inject-sham wrong, k is a derived step   36.6 [  28.9,   45.7] (n=181, 6 datasets)
+
+l08 / notes   forks: {'null': 762, 'sham': 762, 'inject': 762}   tasks: 239
+  wrong                              null  43.3  sham  44.8  inject  91.8   inject-sham   47.0 [  40.7,   53.7] (n=239, 6 datasets)
+  prop (= counterfactual)            null   0.2  sham   0.2  inject  48.6   inject-sham   48.3 [  41.9,   55.4] (n=239, 6 datasets)
+  wrong, direct child                null  40.2  sham  41.6  inject  91.6   inject-sham   50.0 [  43.5,   57.0] (n=239, 6 datasets)
+  wrong, deeper descendant           null  58.0  sham  58.7  inject  92.7   inject-sham   34.0 [  26.3,   42.0] (n=167, 6 datasets)
+  wrong, non-descendant              null  29.9  sham  29.2  inject  27.7   inject-sham   -1.5 [  -3.4,    0.3] (n=233, 6 datasets)
+  value copied as literal            null   n/a  sham  57.9  inject  57.2   inject-sham   -0.7 [  -4.1,    2.0] (n=239, 6 datasets)
+  step without answer                null   7.0  sham   6.8  inject   5.7   inject-sham   -1.1 [  -2.6,    0.3] (n=239, 6 datasets)
+  report: step k = w                 null   0.0  sham   0.0  inject 100.0   inject-sham  100.0 [ 100.0,  100.0] (n=239, 6 datasets)
+  report: step k correct             null 100.0  sham 100.0  inject   0.0   inject-sham -100.0 [-100.0, -100.0] (n=239, 6 datasets)
+  report: descendant wrong           null  43.5  sham  44.8  inject  91.8   inject-sham   47.1 [  40.9,   53.8] (n=239, 6 datasets)
+  report: descendant = counterfactual null   0.2  sham   0.2  inject  48.6   inject-sham   48.3 [  41.9,   55.4] (n=239, 6 datasets)
+  inject = cf | sham correct           75.4 [  67.9,   82.4] (n=221, 6 datasets)
+  inject correct | sham correct        14.5 [   8.9,   21.9] (n=221, 6 datasets)
+  null fork differs from clean run     14.1 [  11.2,   17.0] (n=239, 6 datasets)
+  inject-sham wrong, k is a root step (depth 0)   44.7 [  39.0,   51.2] (n=233, 6 datasets)
+  inject-sham wrong, k is a derived step   57.7 [  47.8,   67.0] (n=164, 6 datasets)
+
+l08 / rawlog   forks: {'null': 693, 'sham': 693, 'inject': 693}   tasks: 236
+  wrong                              null  65.0  sham  63.1  inject  72.3   inject-sham    9.2 [   5.2,   13.2] (n=236, 6 datasets)
+  prop (= counterfactual)            null   0.8  sham   0.7  inject  10.1   inject-sham    9.4 [   6.6,   13.1] (n=236, 6 datasets)
+  wrong, direct child                null  61.2  sham  59.0  inject  69.4   inject-sham   10.4 [   5.8,   14.8] (n=236, 6 datasets)
+  wrong, deeper descendant           null  85.6  sham  87.5  inject  88.6   inject-sham    1.1 [  -5.3,    7.5] (n=164, 6 datasets)
+  wrong, non-descendant              null  40.7  sham  41.0  inject  40.9   inject-sham   -0.1 [  -1.1,    0.9] (n=231, 6 datasets)
+  value copied as literal            null   n/a  sham  15.4  inject  13.2   inject-sham   -2.2 [  -4.9,    0.2] (n=236, 6 datasets)
+  step without answer                null   6.4  sham   6.4  inject   6.8   inject-sham    0.4 [  -0.7,    1.4] (n=236, 6 datasets)
+  report: step k = w                 null   0.0  sham   0.0  inject 100.0   inject-sham  100.0 [ 100.0,  100.0] (n=236, 6 datasets)
+  report: step k correct             null 100.0  sham 100.0  inject   0.0   inject-sham -100.0 [-100.0, -100.0] (n=236, 6 datasets)
+  report: descendant wrong           null  64.8  sham  63.3  inject  72.5   inject-sham    9.2 [   5.2,   13.2] (n=236, 6 datasets)
+  report: descendant = counterfactual null   0.9  sham   0.7  inject  10.2   inject-sham    9.5 [   6.7,   13.2] (n=236, 6 datasets)
+  inject = cf | sham correct           18.9 [  12.5,   26.5] (n=196, 6 datasets)
+  inject correct | sham correct        69.9 [  61.8,   78.3] (n=196, 6 datasets)
+  null fork differs from clean run     14.5 [  11.8,   17.4] (n=236, 6 datasets)
+  inject-sham wrong, k is a root step (depth 0)    5.7 [   2.8,    8.5] (n=233, 6 datasets)
+  inject-sham wrong, k is a derived step   21.3 [   8.0,   33.6] (n=129, 6 datasets)
+
+q01 / fullctx   forks: {'null': 517, 'sham': 517, 'inject': 517}   tasks: 223
+  wrong                              null  84.2  sham  84.2  inject  86.5   inject-sham    2.3 [   0.4,    4.7] (n=223, 6 datasets)
+  prop (= counterfactual)            null   0.4  sham   0.4  inject   3.9   inject-sham    3.6 [   1.3,    6.3] (n=223, 6 datasets)
+  wrong, direct child                null  82.0  sham  81.9  inject  84.7   inject-sham    2.8 [   0.5,    5.7] (n=223, 6 datasets)
+  wrong, deeper descendant           null  96.3  sham  96.3  inject  97.4   inject-sham    1.1 [  -1.2,    4.3] (n=147, 6 datasets)
+  wrong, non-descendant              null  64.2  sham  64.6  inject  64.5   inject-sham   -0.1 [  -1.0,    0.9] (n=215, 6 datasets)
+  value copied as literal            null   n/a  sham   6.7  inject   6.1   inject-sham   -0.6 [  -3.7,    2.2] (n=223, 6 datasets)
+  step without answer                null  29.4  sham  29.5  inject  29.9   inject-sham    0.4 [  -2.7,    3.5] (n=223, 6 datasets)
+  report: step k = w                 null   0.0  sham   0.0  inject  98.5   inject-sham   98.5 [  96.3,   99.9] (n=223, 6 datasets)
+  report: step k correct             null  99.7  sham  99.6  inject   1.3   inject-sham  -98.4 [ -99.8,  -96.1] (n=223, 6 datasets)
+  report: descendant wrong           null  84.0  sham  84.0  inject  86.8   inject-sham    2.8 [   0.8,    5.1] (n=223, 6 datasets)
+  report: descendant = counterfactual null   0.5  sham   0.4  inject   4.1   inject-sham    3.7 [   1.3,    6.4] (n=223, 6 datasets)
+  inject = cf | sham correct           14.1 [   3.5,   25.3] (n=104, 6 datasets)
+  inject correct | sham correct        75.8 [  63.9,   88.4] (n=104, 6 datasets)
+  null fork differs from clean run     13.9 [   9.6,   17.7] (n=223, 6 datasets)
+  inject-sham wrong, k is a root step (depth 0)    2.5 [   0.2,    5.2] (n=221, 6 datasets)
+  inject-sham wrong, k is a derived step    4.5 [   0.0,   11.6] (n=55, 6 datasets)
+
+q01 / notes   forks: {'null': 567, 'sham': 567, 'inject': 567}   tasks: 232
+  wrong                              null  75.4  sham  74.9  inject  86.3   inject-sham   11.4 [   7.7,   15.1] (n=232, 6 datasets)
+  prop (= counterfactual)            null   0.7  sham   0.5  inject  12.5   inject-sham   12.0 [   8.8,   15.4] (n=232, 6 datasets)
+  wrong, direct child                null  74.3  sham  72.8  inject  86.5   inject-sham   13.7 [   9.6,   18.1] (n=232, 6 datasets)
+  wrong, deeper descendant           null  80.5  sham  81.0  inject  86.2   inject-sham    5.2 [   0.6,   11.4] (n=147, 6 datasets)
+  wrong, non-descendant              null  60.4  sham  60.1  inject  61.3   inject-sham    1.2 [  -0.6,    2.9] (n=226, 6 datasets)
+  value copied as literal            null   n/a  sham  22.6  inject  20.6   inject-sham   -2.0 [  -4.9,    0.9] (n=232, 6 datasets)
+  step without answer                null  20.1  sham  21.2  inject  21.8   inject-sham    0.6 [  -1.3,    2.5] (n=232, 6 datasets)
+  report: step k = w                 null   0.0  sham   0.0  inject  99.9   inject-sham   99.9 [  99.6,  100.0] (n=232, 6 datasets)
+  report: step k correct             null  98.9  sham  99.2  inject   0.0   inject-sham  -99.2 [-100.0,  -97.7] (n=232, 6 datasets)
+  report: descendant wrong           null  77.1  sham  75.5  inject  87.7   inject-sham   12.1 [   8.4,   15.9] (n=232, 6 datasets)
+  report: descendant = counterfactual null   0.8  sham   0.5  inject  12.2   inject-sham   11.7 [   8.6,   15.1] (n=232, 6 datasets)
+  inject = cf | sham correct           37.2 [  29.0,   45.6] (n=156, 6 datasets)
+  inject correct | sham correct        48.4 [  39.6,   58.6] (n=156, 6 datasets)
+  null fork differs from clean run     23.7 [  19.5,   27.5] (n=232, 6 datasets)
+  inject-sham wrong, k is a root step (depth 0)   11.5 [   7.7,   15.5] (n=227, 6 datasets)
+  inject-sham wrong, k is a derived step   14.0 [  -0.6,   26.8] (n=91, 6 datasets)
+
+q01 / rawlog   forks: {'null': 488, 'sham': 488, 'inject': 488}   tasks: 227
+  wrong                              null  78.3  sham  77.0  inject  77.6   inject-sham    0.7 [  -2.4,    3.6] (n=227, 6 datasets)
+  prop (= counterfactual)            null   0.0  sham   0.5  inject   0.6   inject-sham    0.1 [  -0.6,    0.9] (n=227, 6 datasets)
+  wrong, direct child                null  79.4  sham  77.7  inject  78.6   inject-sham    1.0 [  -2.6,    4.2] (n=227, 6 datasets)
+  wrong, deeper descendant           null  75.5  sham  76.9  inject  78.0   inject-sham    1.2 [  -3.9,    6.6] (n=148, 6 datasets)
+  wrong, non-descendant              null  63.6  sham  63.6  inject  64.8   inject-sham    1.2 [  -0.8,    3.8] (n=222, 6 datasets)
+  value copied as literal            null   n/a  sham   5.3  inject   1.5   inject-sham   -3.8 [  -7.2,   -0.8] (n=227, 6 datasets)
+  step without answer                null  25.7  sham  25.3  inject  24.6   inject-sham   -0.7 [  -3.0,    1.4] (n=227, 6 datasets)
+  report: step k = w                 null   0.0  sham   0.0  inject  98.8   inject-sham   98.8 [  97.4,   99.8] (n=227, 6 datasets)
+  report: step k correct             null  94.6  sham  99.2  inject   0.1   inject-sham  -99.1 [ -99.9,  -98.1] (n=227, 6 datasets)
+  report: descendant wrong           null  85.3  sham  84.7  inject  84.8   inject-sham    0.1 [  -2.6,    3.0] (n=227, 6 datasets)
+  report: descendant = counterfactual null   0.1  sham   0.3  inject   0.6   inject-sham    0.2 [  -0.6,    1.0] (n=227, 6 datasets)
+  inject = cf | sham correct            2.0 [   0.0,    5.7] (n=122, 6 datasets)
+  inject correct | sham correct        78.6 [  69.2,   87.5] (n=122, 6 datasets)
+  null fork differs from clean run     26.4 [  22.7,   30.3] (n=227, 6 datasets)
+  inject-sham wrong, k is a root step (depth 0)    0.5 [  -2.3,    3.2] (n=226, 6 datasets)
+  inject-sham wrong, k is a derived step   -1.0 [ -11.8,   10.6] (n=52, 6 datasets)
+
+q03 / fullctx   forks: {'null': 692, 'sham': 692, 'inject': 692}   tasks: 236
+  wrong                              null  51.1  sham  49.2  inject  55.0   inject-sham    5.8 [   1.8,   10.1] (n=236, 6 datasets)
+  prop (= counterfactual)            null   0.5  sham   0.4  inject   6.0   inject-sham    5.7 [   3.3,    8.4] (n=236, 6 datasets)
+  wrong, direct child                null  47.3  sham  45.3  inject  51.5   inject-sham    6.2 [   2.1,   10.7] (n=236, 6 datasets)
+  wrong, deeper descendant           null  72.6  sham  76.1  inject  77.3   inject-sham    1.3 [  -5.8,    8.3] (n=158, 6 datasets)
+  wrong, non-descendant              null  39.4  sham  38.6  inject  38.5   inject-sham   -0.2 [  -2.0,    1.8] (n=229, 6 datasets)
+  value copied as literal            null   n/a  sham  10.9  inject   8.4   inject-sham   -2.4 [  -5.3,   -0.1] (n=236, 6 datasets)
+  step without answer                null  20.7  sham  19.8  inject  21.1   inject-sham    1.2 [  -1.4,    3.8] (n=236, 6 datasets)
+  report: step k = w                 null   0.0  sham   0.0  inject  99.6   inject-sham   99.6 [  99.0,  100.0] (n=236, 6 datasets)
+  report: step k correct             null 100.0  sham  99.7  inject   0.2   inject-sham  -99.5 [-100.0,  -98.6] (n=236, 6 datasets)
+  report: descendant wrong           null  50.9  sham  49.0  inject  54.9   inject-sham    5.9 [   1.9,   10.6] (n=236, 6 datasets)
+  report: descendant = counterfactual null   0.6  sham   0.6  inject   6.1   inject-sham    5.5 [   3.0,    8.4] (n=236, 6 datasets)
+  inject = cf | sham correct            9.3 [   5.1,   14.4] (n=204, 6 datasets)
+  inject correct | sham correct        78.2 [  71.0,   84.7] (n=204, 6 datasets)
+  null fork differs from clean run     19.8 [  16.6,   23.3] (n=236, 6 datasets)
+  inject-sham wrong, k is a root step (depth 0)    4.5 [   0.7,    8.8] (n=232, 6 datasets)
+  inject-sham wrong, k is a derived step   11.6 [   3.3,   21.2] (n=129, 6 datasets)
+
+q03 / notes   forks: {'null': 589, 'sham': 589, 'inject': 589}   tasks: 235
+  wrong                              null  67.1  sham  68.6  inject  78.3   inject-sham    9.7 [   5.8,   13.8] (n=235, 6 datasets)
+  prop (= counterfactual)            null   0.4  sham   0.5  inject  10.0   inject-sham    9.5 [   6.8,   12.6] (n=235, 6 datasets)
+  wrong, direct child                null  63.6  sham  65.6  inject  76.5   inject-sham   10.9 [   6.6,   15.2] (n=235, 6 datasets)
+  wrong, deeper descendant           null  85.2  sham  85.3  inject  84.5   inject-sham   -0.7 [  -7.1,    5.2] (n=154, 6 datasets)
+  wrong, non-descendant              null  51.2  sham  51.9  inject  51.0   inject-sham   -0.9 [  -3.2,    1.0] (n=228, 6 datasets)
+  value copied as literal            null   n/a  sham  17.3  inject  15.8   inject-sham   -1.5 [  -4.4,    0.9] (n=235, 6 datasets)
+  step without answer                null  22.9  sham  20.4  inject  21.7   inject-sham    1.4 [  -0.2,    2.9] (n=235, 6 datasets)
+  report: step k = w                 null   0.0  sham   0.0  inject  99.3   inject-sham   99.3 [  98.4,  100.0] (n=235, 6 datasets)
+  report: step k correct             null  97.1  sham  99.8  inject   0.0   inject-sham  -99.8 [-100.0,  -99.1] (n=235, 6 datasets)
+  report: descendant wrong           null  67.2  sham  69.0  inject  78.7   inject-sham    9.7 [   5.8,   13.6] (n=235, 6 datasets)
+  report: descendant = counterfactual null   0.8  sham   0.5  inject   9.9   inject-sham    9.4 [   6.7,   12.5] (n=235, 6 datasets)
+  inject = cf | sham correct           22.8 [  17.7,   28.3] (n=177, 6 datasets)
+  inject correct | sham correct        55.4 [  47.6,   62.9] (n=177, 6 datasets)
+  null fork differs from clean run     23.3 [  19.7,   27.1] (n=235, 6 datasets)
+  inject-sham wrong, k is a root step (depth 0)    8.5 [   4.4,   13.1] (n=231, 6 datasets)
+  inject-sham wrong, k is a derived step   15.9 [   7.9,   26.3] (n=99, 6 datasets)
+
+q03 / rawlog   forks: {'null': 582, 'sham': 582, 'inject': 582}   tasks: 236
+  wrong                              null  66.6  sham  65.0  inject  71.8   inject-sham    6.9 [   3.1,   10.4] (n=236, 6 datasets)
+  prop (= counterfactual)            null   0.3  sham   0.7  inject   5.0   inject-sham    4.3 [   2.0,    6.7] (n=236, 6 datasets)
+  wrong, direct child                null  63.7  sham  62.6  inject  69.6   inject-sham    7.0 [   2.5,   11.2] (n=236, 6 datasets)
+  wrong, deeper descendant           null  87.2  sham  79.1  inject  84.9   inject-sham    5.8 [  -0.2,   12.5] (n=155, 6 datasets)
+  wrong, non-descendant              null  53.9  sham  54.2  inject  54.2   inject-sham    0.0 [  -1.5,    1.7] (n=228, 6 datasets)
+  value copied as literal            null   n/a  sham  10.5  inject   9.5   inject-sham   -1.1 [  -4.6,    2.1] (n=236, 6 datasets)
+  step without answer                null  23.5  sham  22.9  inject  23.3   inject-sham    0.4 [  -2.2,    2.9] (n=236, 6 datasets)
+  report: step k = w                 null   0.0  sham   0.0  inject  99.5   inject-sham   99.5 [  98.9,  100.0] (n=236, 6 datasets)
+  report: step k correct             null  99.3  sham  99.9  inject   0.3   inject-sham  -99.5 [-100.0,  -98.6] (n=236, 6 datasets)
+  report: descendant wrong           null  66.4  sham  64.6  inject  71.5   inject-sham    6.9 [   3.3,   10.5] (n=236, 6 datasets)
+  report: descendant = counterfactual null   0.4  sham   0.7  inject   4.8   inject-sham    4.1 [   1.9,    6.5] (n=236, 6 datasets)
+  inject = cf | sham correct           10.2 [   5.5,   15.3] (n=182, 6 datasets)
+  inject correct | sham correct        67.6 [  59.3,   76.1] (n=182, 6 datasets)
+  null fork differs from clean run     24.9 [  21.7,   28.4] (n=236, 6 datasets)
+  inject-sham wrong, k is a root step (depth 0)    7.2 [   3.3,   11.1] (n=232, 6 datasets)
+  inject-sham wrong, k is a derived step    3.1 [  -1.9,    9.1] (n=97, 6 datasets)
+
+q07 / fullctx   forks: {'null': 873, 'sham': 873, 'inject': 873}   tasks: 239
+  wrong                              null  15.6  sham  16.2  inject  82.2   inject-sham   66.0 [  60.7,   71.4] (n=239, 6 datasets)
+  prop (= counterfactual)            null   0.0  sham   0.1  inject  65.6   inject-sham   65.6 [  60.5,   70.7] (n=239, 6 datasets)
+  wrong, direct child                null  14.4  sham  14.9  inject  81.3   inject-sham   66.4 [  61.0,   71.9] (n=239, 6 datasets)
+  wrong, deeper descendant           null  23.0  sham  24.1  inject  91.1   inject-sham   67.0 [  56.9,   76.3] (n=173, 6 datasets)
+  wrong, non-descendant              null   9.2  sham   8.7  inject   8.3   inject-sham   -0.4 [  -1.6,    0.6] (n=234, 6 datasets)
+  value copied as literal            null   n/a  sham  62.8  inject  61.5   inject-sham   -1.3 [  -3.1,    0.6] (n=239, 6 datasets)
+  step without answer                null   2.7  sham   3.0  inject   3.1   inject-sham    0.0 [  -0.5,    0.5] (n=239, 6 datasets)
+  report: step k = w                 null   0.0  sham   0.0  inject  99.5   inject-sham   99.5 [  98.6,  100.0] (n=239, 6 datasets)
+  report: step k correct             null  99.9  sham  99.8  inject   0.0   inject-sham  -99.8 [-100.0,  -99.4] (n=239, 6 datasets)
+  report: descendant wrong           null  15.6  sham  16.4  inject  82.4   inject-sham   66.1 [  60.7,   71.5] (n=239, 6 datasets)
+  report: descendant = counterfactual null   0.0  sham   0.1  inject  65.3   inject-sham   65.3 [  60.1,   70.5] (n=239, 6 datasets)
+  inject = cf | sham correct           73.6 [  68.6,   78.4] (n=234, 6 datasets)
+  inject correct | sham correct        23.2 [  18.6,   28.3] (n=234, 6 datasets)
+  null fork differs from clean run      3.6 [   2.2,    5.3] (n=239, 6 datasets)
+  inject-sham wrong, k is a root step (depth 0)   60.8 [  54.0,   67.1] (n=233, 6 datasets)
+  inject-sham wrong, k is a derived step   77.6 [  70.6,   85.0] (n=211, 6 datasets)
+
+q07 / notes   forks: {'null': 768, 'sham': 768, 'inject': 768}   tasks: 237
+  wrong                              null  30.0  sham  29.1  inject  83.8   inject-sham   54.7 [  49.4,   59.4] (n=237, 6 datasets)
+  prop (= counterfactual)            null   0.3  sham   0.4  inject  53.2   inject-sham   52.8 [  48.8,   57.1] (n=237, 6 datasets)
+  wrong, direct child                null  26.8  sham  24.9  inject  83.2   inject-sham   58.3 [  53.4,   63.0] (n=237, 6 datasets)
+  wrong, deeper descendant           null  47.0  sham  46.1  inject  89.3   inject-sham   43.2 [  30.9,   57.5] (n=170, 6 datasets)
+  wrong, non-descendant              null  21.8  sham  23.5  inject  23.6   inject-sham    0.0 [  -1.7,    1.9] (n=232, 6 datasets)
+  value copied as literal            null   n/a  sham  56.1  inject  56.3   inject-sham    0.2 [  -2.7,    3.0] (n=237, 6 datasets)
+  step without answer                null   3.6  sham   3.5  inject   3.7   inject-sham    0.1 [  -0.7,    0.9] (n=237, 6 datasets)
+  report: step k = w                 null   0.0  sham   0.0  inject  99.4   inject-sham   99.4 [  98.6,  100.0] (n=237, 6 datasets)
+  report: step k correct             null  98.6  sham  99.7  inject   0.0   inject-sham  -99.7 [-100.0,  -98.9] (n=237, 6 datasets)
+  report: descendant wrong           null  31.6  sham  30.8  inject  83.9   inject-sham   53.1 [  47.1,   58.5] (n=237, 6 datasets)
+  report: descendant = counterfactual null   0.3  sham   0.4  inject  52.0   inject-sham   51.6 [  47.1,   56.2] (n=237, 6 datasets)
+  inject = cf | sham correct           67.5 [  62.8,   71.9] (n=232, 6 datasets)
+  inject correct | sham correct        22.8 [  17.4,   27.9] (n=232, 6 datasets)
+  null fork differs from clean run      8.4 [   6.0,   10.9] (n=237, 6 datasets)
+  inject-sham wrong, k is a root step (depth 0)   51.0 [  45.4,   56.4] (n=233, 6 datasets)
+  inject-sham wrong, k is a derived step   64.1 [  52.3,   73.6] (n=184, 6 datasets)
+
+q07 / rawlog   forks: {'null': 788, 'sham': 788, 'inject': 788}   tasks: 239
+  wrong                              null  32.4  sham  30.3  inject  76.2   inject-sham   45.9 [  40.8,   50.7] (n=239, 6 datasets)
+  prop (= counterfactual)            null   0.5  sham   0.3  inject  44.9   inject-sham   44.5 [  40.1,   48.9] (n=239, 6 datasets)
+  wrong, direct child                null  30.2  sham  28.0  inject  75.5   inject-sham   47.5 [  42.0,   52.4] (n=239, 6 datasets)
+  wrong, deeper descendant           null  42.2  sham  39.8  inject  77.0   inject-sham   37.1 [  26.5,   48.9] (n=169, 6 datasets)
+  wrong, non-descendant              null  22.9  sham  23.5  inject  24.0   inject-sham    0.5 [  -1.3,    2.3] (n=232, 6 datasets)
+  value copied as literal            null   n/a  sham  49.5  inject  46.4   inject-sham   -3.0 [  -7.0,    0.1] (n=239, 6 datasets)
+  step without answer                null   3.1  sham   3.5  inject   3.1   inject-sham   -0.3 [  -1.4,    0.6] (n=239, 6 datasets)
+  report: step k = w                 null   0.0  sham   0.0  inject  99.9   inject-sham   99.9 [  99.4,  100.0] (n=239, 6 datasets)
+  report: step k correct             null  99.9  sham  99.9  inject   0.0   inject-sham  -99.9 [-100.0,  -99.4] (n=239, 6 datasets)
+  report: descendant wrong           null  32.0  sham  30.2  inject  76.0   inject-sham   45.8 [  40.5,   50.7] (n=239, 6 datasets)
+  report: descendant = counterfactual null   0.6  sham   0.5  inject  45.0   inject-sham   44.6 [  40.1,   49.0] (n=239, 6 datasets)
+  inject = cf | sham correct           56.4 [  50.4,   61.7] (n=226, 6 datasets)
+  inject correct | sham correct        34.6 [  29.7,   39.9] (n=226, 6 datasets)
+  null fork differs from clean run      7.0 [   4.9,    9.3] (n=239, 6 datasets)
+  inject-sham wrong, k is a root step (depth 0)   36.2 [  28.8,   43.1] (n=232, 6 datasets)
+  inject-sham wrong, k is a derived step   64.6 [  55.9,   72.4] (n=194, 6 datasets)
+
+q14 / fullctx   forks: {'null': 914, 'sham': 914, 'inject': 914}   tasks: 240
+  wrong                              null   3.3  sham   3.5  inject  96.2   inject-sham   92.6 [  89.1,   95.6] (n=240, 6 datasets)
+  prop (= counterfactual)            null   0.0  sham   0.0  inject  93.2   inject-sham   93.1 [  89.9,   95.9] (n=240, 6 datasets)
+  wrong, direct child                null   2.8  sham   2.9  inject  96.1   inject-sham   93.2 [  89.8,   96.1] (n=240, 6 datasets)
+  wrong, deeper descendant           null   6.0  sham   7.5  inject  94.4   inject-sham   86.9 [  79.6,   93.3] (n=174, 6 datasets)
+  wrong, non-descendant              null   2.5  sham   2.6  inject   2.3   inject-sham   -0.4 [  -1.5,    0.3] (n=235, 6 datasets)
+  value copied as literal            null   n/a  sham  81.3  inject  81.3   inject-sham    0.0 [  -1.0,    1.1] (n=240, 6 datasets)
+  step without answer                null   0.5  sham   0.6  inject   0.4   inject-sham   -0.2 [  -0.5,    0.0] (n=240, 6 datasets)
+  report: step k = w                 null   0.0  sham   0.0  inject 100.0   inject-sham  100.0 [ 100.0,  100.0] (n=240, 6 datasets)
+  report: step k correct             null 100.0  sham 100.0  inject   0.0   inject-sham -100.0 [-100.0, -100.0] (n=240, 6 datasets)
+  report: descendant wrong           null   3.3  sham   3.5  inject  96.2   inject-sham   92.6 [  89.1,   95.6] (n=240, 6 datasets)
+  report: descendant = counterfactual null   0.0  sham   0.0  inject  93.2   inject-sham   93.1 [  89.9,   95.9] (n=240, 6 datasets)
+  inject = cf | sham correct           95.5 [  92.8,   97.8] (n=238, 6 datasets)
+  inject correct | sham correct         4.1 [   1.7,    6.8] (n=238, 6 datasets)
+  null fork differs from clean run      0.2 [   0.0,    0.8] (n=240, 6 datasets)
+  inject-sham wrong, k is a root step (depth 0)   91.6 [  87.5,   95.3] (n=233, 6 datasets)
+  inject-sham wrong, k is a derived step   94.2 [  89.7,   97.7] (n=223, 6 datasets)
+
+q14 / notes   forks: {'null': 881, 'sham': 881, 'inject': 881}   tasks: 239
+  wrong                              null  10.3  sham   8.9  inject  93.3   inject-sham   84.4 [  80.0,   88.3] (n=239, 6 datasets)
+  prop (= counterfactual)            null   0.3  sham   0.1  inject  83.2   inject-sham   83.1 [  78.9,   86.8] (n=239, 6 datasets)
+  wrong, direct child                null   9.5  sham   8.2  inject  93.3   inject-sham   85.1 [  81.0,   88.9] (n=239, 6 datasets)
+  wrong, deeper descendant           null  15.5  sham  11.7  inject  90.9   inject-sham   79.2 [  70.7,   88.0] (n=172, 6 datasets)
+  wrong, non-descendant              null   8.1  sham   5.9  inject   5.9   inject-sham    0.0 [  -0.9,    0.8] (n=233, 6 datasets)
+  value copied as literal            null   n/a  sham  78.1  inject  78.7   inject-sham    0.6 [  -1.1,    2.3] (n=239, 6 datasets)
+  step without answer                null   0.3  sham   0.5  inject   0.6   inject-sham    0.1 [  -0.1,    0.3] (n=239, 6 datasets)
+  report: step k = w                 null   0.0  sham   0.0  inject 100.0   inject-sham  100.0 [ 100.0,  100.0] (n=239, 6 datasets)
+  report: step k correct             null 100.0  sham 100.0  inject   0.0   inject-sham -100.0 [-100.0, -100.0] (n=239, 6 datasets)
+  report: descendant wrong           null  10.3  sham   8.9  inject  93.3   inject-sham   84.4 [  80.0,   88.3] (n=239, 6 datasets)
+  report: descendant = counterfactual null   0.3  sham   0.1  inject  83.2   inject-sham   83.1 [  78.9,   86.8] (n=239, 6 datasets)
+  inject = cf | sham correct           89.5 [  86.0,   92.4] (n=235, 6 datasets)
+  inject correct | sham correct         7.0 [   4.4,   10.1] (n=235, 6 datasets)
+  null fork differs from clean run      0.7 [   0.1,    1.6] (n=239, 6 datasets)
+  inject-sham wrong, k is a root step (depth 0)   84.3 [  78.3,   89.1] (n=233, 6 datasets)
+  inject-sham wrong, k is a derived step   83.7 [  76.1,   90.1] (n=212, 6 datasets)
+
+q14 / rawlog   forks: {'null': 900, 'sham': 900, 'inject': 900}   tasks: 239
+  wrong                              null   8.2  sham   7.8  inject  97.9   inject-sham   90.2 [  87.2,   93.1] (n=239, 6 datasets)
+  prop (= counterfactual)            null   0.0  sham   0.1  inject  89.9   inject-sham   89.9 [  87.1,   92.6] (n=239, 6 datasets)
+  wrong, direct child                null   7.3  sham   6.8  inject  98.1   inject-sham   91.2 [  88.5,   93.9] (n=239, 6 datasets)
+  wrong, deeper descendant           null  13.6  sham  12.1  inject  96.6   inject-sham   84.5 [  78.5,   89.9] (n=174, 6 datasets)
+  wrong, non-descendant              null   3.9  sham   4.1  inject   4.3   inject-sham    0.2 [  -0.6,    1.0] (n=234, 6 datasets)
+  value copied as literal            null   n/a  sham  82.2  inject  82.0   inject-sham   -0.2 [  -0.9,    0.6] (n=239, 6 datasets)
+  step without answer                null   0.3  sham   0.2  inject   0.2   inject-sham    0.1 [  -0.2,    0.3] (n=239, 6 datasets)
+  report: step k = w                 null   0.0  sham   0.0  inject 100.0   inject-sham  100.0 [ 100.0,  100.0] (n=239, 6 datasets)
+  report: step k correct             null 100.0  sham 100.0  inject   0.0   inject-sham -100.0 [-100.0, -100.0] (n=239, 6 datasets)
+  report: descendant wrong           null   8.2  sham   7.8  inject  97.9   inject-sham   90.2 [  87.2,   93.1] (n=239, 6 datasets)
+  report: descendant = counterfactual null   0.1  sham   0.1  inject  89.9   inject-sham   89.9 [  87.1,   92.6] (n=239, 6 datasets)
+  inject = cf | sham correct           95.2 [  92.9,   97.2] (n=239, 6 datasets)
+  inject correct | sham correct         2.1 [   0.8,    4.0] (n=239, 6 datasets)
+  null fork differs from clean run      0.0 [   0.0,    0.0] (n=239, 6 datasets)
+  inject-sham wrong, k is a root step (depth 0)   91.8 [  88.7,   94.5] (n=233, 6 datasets)
+  inject-sham wrong, k is a derived step   87.3 [  81.8,   92.2] (n=223, 6 datasets)
+
+q32 / fullctx   forks: {'null': 922, 'sham': 922, 'inject': 922}   tasks: 240
+  wrong                              null   1.2  sham   0.9  inject  91.5   inject-sham   90.6 [  86.9,   93.8] (n=240, 6 datasets)
+  prop (= counterfactual)            null   0.4  sham   0.2  inject  90.3   inject-sham   90.1 [  86.0,   93.7] (n=240, 6 datasets)
+  wrong, direct child                null   1.2  sham   0.8  inject  91.5   inject-sham   90.7 [  87.1,   93.9] (n=240, 6 datasets)
+  wrong, deeper descendant           null   1.7  sham   1.4  inject  92.4   inject-sham   90.9 [  85.1,   95.9] (n=173, 6 datasets)
+  wrong, non-descendant              null   0.6  sham   0.7  inject   0.6   inject-sham   -0.2 [  -0.8,    0.4] (n=235, 6 datasets)
+  value copied as literal            null   n/a  sham  76.4  inject  76.5   inject-sham    0.1 [  -1.1,    1.3] (n=240, 6 datasets)
+  step without answer                null   0.0  sham   0.0  inject   0.0   inject-sham   -0.0 [  -0.2,    0.0] (n=240, 6 datasets)
+  report: step k = w                 null   0.0  sham   0.0  inject 100.0   inject-sham  100.0 [ 100.0,  100.0] (n=240, 6 datasets)
+  report: step k correct             null 100.0  sham  99.9  inject   0.0   inject-sham  -99.9 [-100.0,  -99.6] (n=240, 6 datasets)
+  report: descendant wrong           null   1.2  sham   0.9  inject  91.5   inject-sham   90.6 [  86.9,   93.8] (n=240, 6 datasets)
+  report: descendant = counterfactual null   0.4  sham   0.2  inject  90.3   inject-sham   90.1 [  86.0,   93.7] (n=240, 6 datasets)
+  inject = cf | sham correct           91.0 [  86.8,   94.5] (n=239, 6 datasets)
+  inject correct | sham correct         8.5 [   5.3,   12.2] (n=239, 6 datasets)
+  null fork differs from clean run      0.1 [   0.0,    0.4] (n=240, 6 datasets)
+  inject-sham wrong, k is a root step (depth 0)   89.8 [  85.5,   93.3] (n=233, 6 datasets)
+  inject-sham wrong, k is a derived step   92.9 [  88.7,   96.5] (n=225, 6 datasets)
+
+q32 / notes   forks: {'null': 897, 'sham': 897, 'inject': 897}   tasks: 240
+  wrong                              null   6.0  sham   5.0  inject  77.2   inject-sham   72.2 [  66.1,   78.3] (n=240, 6 datasets)
+  prop (= counterfactual)            null   0.1  sham   0.1  inject  71.9   inject-sham   71.8 [  65.6,   78.2] (n=240, 6 datasets)
+  wrong, direct child                null   5.5  sham   4.5  inject  78.2   inject-sham   73.7 [  67.7,   79.6] (n=240, 6 datasets)
+  wrong, deeper descendant           null  11.5  sham   9.9  inject  79.9   inject-sham   69.9 [  61.0,   78.5] (n=171, 6 datasets)
+  wrong, non-descendant              null   4.7  sham   2.7  inject   3.4   inject-sham    0.7 [  -0.2,    1.7] (n=235, 6 datasets)
+  value copied as literal            null   n/a  sham  66.7  inject  65.5   inject-sham   -1.2 [  -2.6,    0.2] (n=240, 6 datasets)
+  step without answer                null   0.6  sham   0.4  inject   0.4   inject-sham    0.0 [  -0.1,    0.2] (n=240, 6 datasets)
+  report: step k = w                 null   0.0  sham   0.0  inject 100.0   inject-sham  100.0 [ 100.0,  100.0] (n=240, 6 datasets)
+  report: step k correct             null 100.0  sham 100.0  inject   0.0   inject-sham -100.0 [-100.0, -100.0] (n=240, 6 datasets)
+  report: descendant wrong           null   5.6  sham   4.6  inject  77.2   inject-sham   72.6 [  66.3,   78.8] (n=240, 6 datasets)
+  report: descendant = counterfactual null   0.1  sham   0.1  inject  72.4   inject-sham   72.3 [  65.7,   78.8] (n=240, 6 datasets)
+  inject = cf | sham correct           75.3 [  69.0,   81.1] (n=240, 6 datasets)
+  inject correct | sham correct        23.1 [  17.5,   29.6] (n=240, 6 datasets)
+  null fork differs from clean run      1.7 [   0.8,    2.8] (n=240, 6 datasets)
+  inject-sham wrong, k is a root step (depth 0)   69.5 [  63.0,   76.2] (n=233, 6 datasets)
+  inject-sham wrong, k is a derived step   79.4 [  72.0,   85.7] (n=218, 6 datasets)
+
+q32 / rawlog   forks: {'null': 906, 'sham': 906, 'inject': 906}   tasks: 239
+  wrong                              null   2.5  sham   2.4  inject  99.8   inject-sham   97.5 [  95.6,   98.8] (n=239, 6 datasets)
+  prop (= counterfactual)            null   0.0  sham   0.2  inject  97.2   inject-sham   97.1 [  94.7,   98.6] (n=239, 6 datasets)
+  wrong, direct child                null   2.5  sham   2.3  inject  99.8   inject-sham   97.5 [  95.7,   98.9] (n=239, 6 datasets)
+  wrong, deeper descendant           null   2.7  sham   4.8  inject 100.0   inject-sham   95.2 [  92.1,   97.9] (n=173, 6 datasets)
+  wrong, non-descendant              null   2.8  sham   2.5  inject   3.4   inject-sham    0.9 [  -0.1,    2.0] (n=235, 6 datasets)
+  value copied as literal            null   n/a  sham  84.1  inject  84.5   inject-sham    0.3 [  -0.1,    0.9] (n=239, 6 datasets)
+  step without answer                null   0.1  sham   0.1  inject   0.0   inject-sham   -0.0 [  -0.2,    0.1] (n=239, 6 datasets)
+  report: step k = w                 null   0.0  sham   0.0  inject 100.0   inject-sham  100.0 [ 100.0,  100.0] (n=239, 6 datasets)
+  report: step k correct             null  99.9  sham  99.9  inject   0.0   inject-sham  -99.9 [-100.0,  -99.7] (n=239, 6 datasets)
+  report: descendant wrong           null   2.6  sham   2.6  inject  99.8   inject-sham   97.2 [  95.3,   98.7] (n=239, 6 datasets)
+  report: descendant = counterfactual null   0.0  sham   0.2  inject  97.1   inject-sham   96.9 [  94.6,   98.5] (n=239, 6 datasets)
+  inject = cf | sham correct           98.5 [  97.2,   99.4] (n=238, 6 datasets)
+  inject correct | sham correct         0.2 [   0.0,    0.6] (n=238, 6 datasets)
+  null fork differs from clean run      1.5 [   0.6,    2.6] (n=239, 6 datasets)
+  inject-sham wrong, k is a root step (depth 0)   97.1 [  95.2,   98.6] (n=233, 6 datasets)
+  inject-sham wrong, k is a derived step   98.5 [  95.6,  100.0] (n=219, 6 datasets)
+
+====================================================================================================
+3. Memory conditions compared within a model (paired by task)
+   left: difference of inject-sham 'wrong'; right: difference of P(inject = cf | sham correct)
+====================================================================================================
+  l08: fullctx - notes     -22.1 [ -29.0,  -15.4] (n=238, 6 datasets)   |    -41.7 [ -50.5,  -31.3] (n=212, 6 datasets)
+  l08: fullctx - rawlog     15.4 [  11.3,   19.9] (n=236, 6 datasets)   |     11.3 [   3.9,   19.2] (n=193, 6 datasets)
+  l08: notes - rawlog     37.8 [  31.7,   43.9] (n=236, 6 datasets)   |     55.4 [  47.0,   64.1] (n=190, 6 datasets)
+  q01: fullctx - notes      -9.1 [ -13.4,   -5.5] (n=221, 6 datasets)   |    -25.3 [ -37.3,  -13.3] (n=87, 6 datasets)
+  q01: fullctx - rawlog      1.7 [  -2.2,    5.4] (n=219, 6 datasets)   |     11.1 [   0.0,   22.3] (n=69, 6 datasets)
+  q01: notes - rawlog     10.6 [   5.9,   15.5] (n=226, 6 datasets)   |     33.7 [  26.1,   41.7] (n=106, 6 datasets)
+  q03: fullctx - notes      -3.6 [  -8.9,    1.7] (n=233, 6 datasets)   |    -10.3 [ -16.7,   -3.2] (n=160, 6 datasets)
+  q03: fullctx - rawlog     -1.1 [  -6.9,    5.2] (n=234, 6 datasets)   |     -2.3 [  -8.8,    4.5] (n=170, 6 datasets)
+  q03: notes - rawlog      2.4 [  -3.1,    8.8] (n=233, 6 datasets)   |      8.9 [   1.4,   17.0] (n=158, 6 datasets)
+  q07: fullctx - notes      11.2 [   4.2,   18.5] (n=237, 6 datasets)   |      5.5 [  -0.9,   11.4] (n=229, 6 datasets)
+  q07: fullctx - rawlog     20.2 [  14.0,   26.6] (n=238, 6 datasets)   |     16.5 [  10.4,   23.3] (n=222, 6 datasets)
+  q07: notes - rawlog      8.9 [   3.2,   14.5] (n=236, 6 datasets)   |     11.5 [   6.5,   16.6] (n=222, 6 datasets)
+  q14: fullctx - notes       8.2 [   4.5,   12.3] (n=239, 6 datasets)   |      6.0 [   3.1,    9.0] (n=234, 6 datasets)
+  q14: fullctx - rawlog      2.4 [  -0.7,    5.4] (n=239, 6 datasets)   |     -0.1 [  -3.1,    2.9] (n=237, 6 datasets)
+  q14: notes - rawlog     -5.8 [  -9.0,   -2.6] (n=239, 6 datasets)   |     -6.2 [  -9.5,   -3.0] (n=235, 6 datasets)
+  q32: fullctx - notes      18.4 [  11.5,   25.5] (n=240, 6 datasets)   |     15.8 [   9.1,   23.3] (n=239, 6 datasets)
+  q32: fullctx - rawlog     -6.9 [ -11.2,   -3.1] (n=239, 6 datasets)   |     -7.8 [ -11.7,   -4.2] (n=237, 6 datasets)
+  q32: notes - rawlog    -25.3 [ -31.3,  -19.4] (n=239, 6 datasets)   |    -23.4 [ -29.4,  -17.3] (n=238, 6 datasets)
+
+====================================================================================================
+4. Per dataset (tasks of one table; interval = bootstrap over its tasks only)
+   clean = clean step accuracy; effect = inject-sham 'wrong'; prop|sham ok = P(inject = cf | sham correct)
+====================================================================================================
+
+l08 / fullctx
+  credit     clean   78.1 [  71.2,   84.1] (n=40)   effect   28.7 [  19.9,   37.9] (n=39)   prop|sham ok   38.0 [  27.4,   48.3] (n=38)
+  diabetes   clean   79.7 [  74.1,   85.0] (n=40)   effect   23.7 [  13.9,   33.6] (n=40)   prop|sham ok   34.1 [  22.7,   46.7] (n=38)
+  heart      clean   82.5 [  76.9,   87.5] (n=40)   effect   22.7 [  14.9,   30.9] (n=40)   prop|sham ok   31.8 [  21.4,   42.6] (n=37)
+  iris       clean   76.2 [  70.0,   81.9] (n=40)   effect   16.4 [   8.9,   25.1] (n=39)   prop|sham ok   20.5 [  10.9,   30.5] (n=38)
+  steel      clean   81.6 [  75.3,   87.2] (n=40)   effect   27.7 [  17.7,   38.3] (n=40)   prop|sham ok   39.3 [  27.1,   51.3] (n=39)
+  wine       clean   78.4 [  70.9,   85.6] (n=40)   effect   28.5 [  18.6,   39.5] (n=40)   prop|sham ok   38.3 [  27.1,   50.2] (n=35)
+
+l08 / nomem
+  credit     clean   59.7 [  55.6,   63.7] (n=40)
+  diabetes   clean   61.3 [  56.9,   65.3] (n=40)
+  heart      clean   60.6 [  55.9,   65.6] (n=40)
+  iris       clean   63.4 [  58.8,   67.8] (n=40)
+  steel      clean   63.7 [  59.1,   68.1] (n=40)
+  wine       clean   62.5 [  57.2,   68.1] (n=40)
+
+l08 / notes
+  credit     clean   74.1 [  68.4,   79.7] (n=40)   effect   53.3 [  43.4,   63.3] (n=40)   prop|sham ok   84.1 [  75.7,   91.4] (n=37)
+  diabetes   clean   75.3 [  71.6,   79.1] (n=40)   effect   38.1 [  29.6,   47.2] (n=40)   prop|sham ok   64.2 [  53.0,   74.3] (n=37)
+  heart      clean   74.7 [  68.8,   80.3] (n=40)   effect   47.5 [  40.2,   55.1] (n=40)   prop|sham ok   70.3 [  58.6,   80.4] (n=37)
+  iris       clean   70.6 [  64.1,   76.9] (n=40)   effect   43.7 [  36.6,   51.5] (n=39)   prop|sham ok   72.5 [  62.5,   81.7] (n=37)
+  steel      clean   75.3 [  68.8,   80.9] (n=40)   effect   56.8 [  47.5,   65.4] (n=40)   prop|sham ok   86.0 [  78.7,   92.1] (n=39)
+  wine       clean   70.6 [  63.7,   77.2] (n=40)   effect   42.6 [  33.2,   52.0] (n=40)   prop|sham ok   74.6 [  62.7,   84.9] (n=34)
+
+l08 / rawlog
+  credit     clean   63.7 [  58.8,   69.1] (n=40)   effect   13.4 [   7.2,   19.9] (n=39)   prop|sham ok   32.5 [  21.6,   43.8] (n=34)
+  diabetes   clean   65.6 [  61.3,   70.3] (n=40)   effect    7.2 [   3.2,   11.8] (n=40)   prop|sham ok   18.6 [   9.1,   29.7] (n=34)
+  heart      clean   62.2 [  57.8,   67.2] (n=40)   effect    9.8 [   5.4,   14.9] (n=38)   prop|sham ok   13.4 [   6.5,   20.5] (n=28)
+  iris       clean   60.6 [  56.6,   64.7] (n=40)   effect    1.1 [  -2.6,    4.8] (n=39)   prop|sham ok   10.4 [   3.2,   19.5] (n=35)
+  steel      clean   60.6 [  55.6,   65.9] (n=40)   effect   10.0 [   5.2,   15.9] (n=40)   prop|sham ok   15.0 [   8.1,   22.8] (n=34)
+  wine       clean   62.2 [  57.2,   66.9] (n=40)   effect   13.6 [   7.2,   20.3] (n=40)   prop|sham ok   23.4 [  12.4,   35.8] (n=31)
+
+q01 / fullctx
+  credit     clean   45.6 [  39.7,   50.9] (n=40)   effect    2.5 [  -1.5,    6.9] (n=38)   prop|sham ok    4.3 [   0.0,   13.0] (n=23)
+  diabetes   clean   40.6 [  34.1,   46.9] (n=40)   effect    1.2 [   0.0,    2.6] (n=37)   prop|sham ok    0.0 [   0.0,    0.0] (n=17)
+  heart      clean   40.6 [  34.1,   46.9] (n=40)   effect    0.5 [  -1.2,    2.8] (n=34)   prop|sham ok    8.3 [   0.0,   25.0] (n=12)
+  iris       clean   43.4 [  37.5,   49.4] (n=40)   effect    6.2 [   1.9,   11.1] (n=38)   prop|sham ok   24.6 [   7.9,   42.1] (n=21)
+  steel      clean   41.6 [  36.2,   47.2] (n=40)   effect    3.3 [   0.0,    7.4] (n=40)   prop|sham ok   27.5 [  10.0,   47.5] (n=20)
+  wine       clean   37.5 [  30.9,   44.4] (n=40)   effect   -0.0 [  -3.7,    2.7] (n=36)   prop|sham ok   18.2 [   0.0,   45.5] (n=11)
+
+q01 / nomem
+  credit     clean   44.4 [  40.0,   48.8] (n=40)
+  diabetes   clean   47.8 [  41.9,   53.8] (n=40)
+  heart      clean   45.3 [  40.9,   49.7] (n=40)
+  iris       clean   49.1 [  44.1,   53.4] (n=40)
+  steel      clean   44.7 [  39.4,   49.7] (n=40)
+  wine       clean   40.3 [  35.0,   45.6] (n=40)
+
+q01 / notes
+  credit     clean   51.2 [  45.6,   56.6] (n=40)   effect   11.2 [   5.7,   16.6] (n=39)   prop|sham ok   29.7 [  16.9,   43.3] (n=30)
+  diabetes   clean   46.9 [  40.9,   52.2] (n=40)   effect   10.3 [   2.7,   19.8] (n=38)   prop|sham ok   30.2 [  14.0,   46.5] (n=25)
+  heart      clean   48.1 [  42.5,   53.4] (n=40)   effect   13.5 [   5.9,   22.1] (n=39)   prop|sham ok   45.3 [  27.9,   63.0] (n=23)
+  iris       clean   50.9 [  45.3,   56.9] (n=40)   effect   12.3 [   6.5,   18.0] (n=40)   prop|sham ok   36.8 [  23.6,   50.3] (n=33)
+  steel      clean   47.8 [  41.9,   53.4] (n=40)   effect   15.5 [   7.4,   23.3] (n=39)   prop|sham ok   46.7 [  30.3,   63.1] (n=29)
+  wine       clean   40.3 [  34.7,   45.6] (n=40)   effect    5.5 [   1.7,    9.8] (n=37)   prop|sham ok   34.0 [  17.4,   53.1] (n=16)
+
+q01 / rawlog
+  credit     clean   47.2 [  42.2,   52.2] (n=40)   effect   -3.4 [  -7.8,   -0.0] (n=39)   prop|sham ok    0.0 [   0.0,    0.0] (n=19)
+  diabetes   clean   42.8 [  36.9,   48.1] (n=40)   effect   -2.0 [  -6.8,    1.7] (n=37)   prop|sham ok    0.0 [   0.0,    0.0] (n=20)
+  heart      clean   44.4 [  39.1,   49.7] (n=40)   effect    4.4 [   0.7,    8.7] (n=37)   prop|sham ok    5.6 [   0.0,   16.7] (n=18)
+  iris       clean   42.2 [  35.9,   48.1] (n=40)   effect    2.3 [  -1.6,    7.2] (n=37)   prop|sham ok    0.0 [   0.0,    0.0] (n=25)
+  steel      clean   47.2 [  41.6,   52.5] (n=40)   effect   -0.6 [  -5.7,    4.5] (n=40)   prop|sham ok    5.6 [   0.0,   14.8] (n=27)
+  wine       clean   37.2 [  31.9,   42.8] (n=40)   effect    3.5 [  -1.7,    8.9] (n=37)   prop|sham ok    0.0 [   0.0,    0.0] (n=13)
+
+q03 / fullctx
+  credit     clean   62.2 [  56.2,   68.4] (n=40)   effect    7.2 [  -1.4,   16.6] (n=40)   prop|sham ok   14.1 [   5.1,   25.3] (n=33)
+  diabetes   clean   64.1 [  57.8,   70.3] (n=40)   effect   12.0 [   4.3,   19.8] (n=40)   prop|sham ok   11.1 [   3.0,   20.7] (n=33)
+  heart      clean   63.4 [  56.6,   70.0] (n=40)   effect    3.9 [  -5.2,   13.0] (n=39)   prop|sham ok   14.4 [   4.7,   26.3] (n=31)
+  iris       clean   70.3 [  63.4,   76.9] (n=40)   effect    4.7 [   1.5,    8.4] (n=38)   prop|sham ok    2.3 [   0.0,    6.0] (n=36)
+  steel      clean   68.4 [  63.1,   73.8] (n=40)   effect    6.2 [  -1.3,   13.0] (n=40)   prop|sham ok    9.4 [   4.3,   15.5] (n=38)
+  wine       clean   63.1 [  55.9,   69.7] (n=40)   effect    0.3 [  -5.3,    6.1] (n=39)   prop|sham ok    5.6 [   0.0,   13.1] (n=33)
+
+q03 / nomem
+  credit     clean   53.4 [  48.1,   58.1] (n=40)
+  diabetes   clean   53.8 [  48.1,   59.7] (n=40)
+  heart      clean   59.1 [  54.4,   63.7] (n=40)
+  iris       clean   56.2 [  51.2,   60.9] (n=40)
+  steel      clean   60.3 [  55.3,   65.3] (n=40)
+  wine       clean   50.3 [  44.7,   55.6] (n=40)
+
+q03 / notes
+  credit     clean   54.1 [  48.4,   59.4] (n=40)   effect    8.4 [   1.5,   15.7] (n=40)   prop|sham ok   24.7 [  13.0,   37.8] (n=32)
+  diabetes   clean   52.5 [  46.9,   58.1] (n=40)   effect   14.3 [   2.9,   26.1] (n=39)   prop|sham ok   21.6 [  10.3,   34.5] (n=29)
+  heart      clean   55.0 [  50.6,   59.4] (n=40)   effect    7.3 [   0.0,   15.1] (n=38)   prop|sham ok   24.7 [  12.2,   38.4] (n=28)
+  iris       clean   57.5 [  52.2,   62.5] (n=40)   effect   10.7 [   4.1,   17.8] (n=39)   prop|sham ok   18.3 [  10.0,   27.8] (n=32)
+  steel      clean   60.0 [  53.8,   66.2] (n=40)   effect    6.5 [  -1.1,   13.9] (n=40)   prop|sham ok   20.5 [  11.4,   29.8] (n=33)
+  wine       clean   50.0 [  44.1,   55.6] (n=40)   effect   11.4 [   3.4,   19.5] (n=39)   prop|sham ok   29.0 [  12.7,   46.0] (n=23)
+
+q03 / rawlog
+  credit     clean   53.8 [  47.8,   59.4] (n=40)   effect    9.9 [   4.2,   16.2] (n=40)   prop|sham ok   12.7 [   4.9,   22.5] (n=34)
+  diabetes   clean   53.4 [  46.9,   59.7] (n=40)   effect    1.7 [  -5.4,    7.8] (n=39)   prop|sham ok    2.6 [   0.0,    7.1] (n=26)
+  heart      clean   53.8 [  49.1,   58.4] (n=40)   effect    7.7 [   0.3,   15.8] (n=39)   prop|sham ok    6.0 [   1.7,   11.2] (n=30)
+  iris       clean   55.6 [  49.4,   61.9] (n=40)   effect    6.1 [  -0.5,   14.0] (n=39)   prop|sham ok   10.5 [   3.5,   18.9] (n=33)
+  steel      clean   55.9 [  50.0,   61.9] (n=40)   effect    9.3 [   2.9,   16.7] (n=40)   prop|sham ok   18.4 [   9.3,   28.8] (n=33)
+  wine       clean   47.2 [  41.6,   52.5] (n=40)   effect    6.4 [   0.8,   13.2] (n=39)   prop|sham ok    8.3 [   1.3,   17.3] (n=26)
+
+q07 / fullctx
+  credit     clean   91.2 [  85.6,   95.9] (n=40)   effect   72.5 [  62.5,   82.0] (n=39)   prop|sham ok   79.5 [  70.5,   87.3] (n=38)
+  diabetes   clean   90.6 [  85.3,   95.0] (n=40)   effect   61.0 [  48.5,   72.9] (n=40)   prop|sham ok   69.8 [  58.2,   81.6] (n=39)
+  heart      clean   85.9 [  79.4,   91.6] (n=40)   effect   64.3 [  53.7,   74.6] (n=40)   prop|sham ok   73.1 [  62.3,   82.7] (n=38)
+  iris       clean   91.6 [  86.9,   95.3] (n=40)   effect   70.5 [  60.6,   79.8] (n=40)   prop|sham ok   76.5 [  67.2,   84.8] (n=40)
+  steel      clean   91.6 [  87.5,   95.3] (n=40)   effect   65.0 [  54.9,   74.9] (n=40)   prop|sham ok   70.8 [  59.8,   80.8] (n=40)
+  wine       clean   91.9 [  86.2,   96.2] (n=40)   effect   62.9 [  50.2,   74.5] (n=40)   prop|sham ok   72.0 [  60.4,   82.6] (n=39)
+
+q07 / nomem
+  credit     clean   74.1 [  68.8,   79.1] (n=40)
+  diabetes   clean   76.2 [  71.2,   81.3] (n=40)
+  heart      clean   68.8 [  63.4,   74.1] (n=40)
+  iris       clean   76.9 [  71.9,   81.9] (n=40)
+  steel      clean   82.2 [  77.8,   86.6] (n=40)
+  wine       clean   73.8 [  67.2,   79.7] (n=40)
+
+q07 / notes
+  credit     clean   76.6 [  69.1,   83.1] (n=40)   effect   58.5 [  49.9,   66.3] (n=39)   prop|sham ok   66.5 [  57.8,   74.6] (n=37)
+  diabetes   clean   83.8 [  76.9,   89.4] (n=40)   effect   57.4 [  46.3,   67.9] (n=40)   prop|sham ok   70.0 [  61.2,   78.5] (n=38)
+  heart      clean   79.1 [  73.4,   84.7] (n=40)   effect   56.5 [  47.4,   64.7] (n=39)   prop|sham ok   70.6 [  61.9,   78.8] (n=38)
+  iris       clean   77.8 [  72.5,   82.5] (n=40)   effect   45.5 [  36.4,   54.7] (n=39)   prop|sham ok   68.0 [  59.0,   76.5] (n=39)
+  steel      clean   82.5 [  77.2,   87.5] (n=40)   effect   53.6 [  43.7,   63.2] (n=40)   prop|sham ok   61.1 [  51.9,   70.0] (n=40)
+  wine       clean   76.2 [  70.3,   82.2] (n=40)   effect   56.6 [  46.1,   67.2] (n=40)   prop|sham ok   69.0 [  59.0,   78.9] (n=40)
+
+q07 / rawlog
+  credit     clean   79.7 [  72.2,   86.6] (n=40)   effect   50.6 [  40.6,   60.4] (n=40)   prop|sham ok   62.4 [  53.4,   71.7] (n=38)
+  diabetes   clean   79.7 [  72.8,   85.9] (n=40)   effect   41.3 [  30.5,   52.4] (n=40)   prop|sham ok   50.3 [  38.6,   62.1] (n=36)
+  heart      clean   79.1 [  74.1,   84.1] (n=40)   effect   41.8 [  29.4,   53.3] (n=40)   prop|sham ok   56.7 [  45.5,   67.4] (n=36)
+  iris       clean   76.6 [  70.0,   82.5] (n=40)   effect   45.6 [  35.6,   56.0] (n=40)   prop|sham ok   58.1 [  47.4,   68.4] (n=38)
+  steel      clean   82.2 [  75.6,   88.4] (n=40)   effect   48.9 [  37.5,   59.6] (n=39)   prop|sham ok   50.4 [  38.2,   62.2] (n=38)
+  wine       clean   78.4 [  71.2,   84.7] (n=40)   effect   47.3 [  37.5,   56.9] (n=40)   prop|sham ok   60.2 [  50.0,   70.5] (n=40)
+
+q14 / fullctx
+  credit     clean   98.1 [  95.6,   99.7] (n=40)   effect   94.8 [  89.0,   99.0] (n=40)   prop|sham ok   95.1 [  90.3,   98.9] (n=40)
+  diabetes   clean   98.4 [  97.2,   99.7] (n=40)   effect   91.7 [  86.6,   96.2] (n=40)   prop|sham ok   96.0 [  92.0,   99.0] (n=40)
+  heart      clean   97.8 [  94.4,  100.0] (n=40)   effect   92.1 [  84.0,   98.4] (n=40)   prop|sham ok   94.1 [  87.3,   98.8] (n=39)
+  iris       clean   98.1 [  95.9,   99.7] (n=40)   effect   87.1 [  79.5,   93.2] (n=40)   prop|sham ok   91.0 [  84.4,   96.1] (n=40)
+  steel      clean   96.9 [  94.4,   99.1] (n=40)   effect   96.2 [  92.5,   99.0] (n=40)   prop|sham ok   98.4 [  96.5,   99.8] (n=40)
+  wine       clean   97.2 [  92.2,  100.0] (n=40)   effect   93.8 [  87.2,   98.4] (n=40)   prop|sham ok   98.2 [  95.1,  100.0] (n=39)
+
+q14 / nomem
+  credit     clean   91.9 [  89.1,   94.4] (n=40)
+  diabetes   clean   94.1 [  90.9,   96.9] (n=40)
+  heart      clean   90.0 [  85.6,   93.8] (n=40)
+  iris       clean   92.8 [  89.7,   95.3] (n=40)
+  steel      clean   92.5 [  89.1,   95.6] (n=40)
+  wine       clean   88.1 [  82.8,   92.8] (n=40)
+
+q14 / notes
+  credit     clean   91.2 [  85.0,   95.9] (n=40)   effect   85.0 [  76.9,   91.9] (n=39)   prop|sham ok   89.6 [  83.3,   94.6] (n=38)
+  diabetes   clean   93.1 [  88.1,   97.2] (n=40)   effect   87.6 [  80.5,   93.5] (n=40)   prop|sham ok   90.5 [  83.5,   95.9] (n=39)
+  heart      clean   90.6 [  85.3,   95.0] (n=40)   effect   79.1 [  70.7,   87.0] (n=40)   prop|sham ok   87.3 [  81.1,   92.6] (n=39)
+  iris       clean   95.6 [  92.8,   98.1] (n=40)   effect   79.6 [  70.9,   87.4] (n=40)   prop|sham ok   83.9 [  77.0,   90.3] (n=40)
+  steel      clean   95.6 [  92.2,   98.1] (n=40)   effect   88.5 [  81.3,   94.3] (n=40)   prop|sham ok   92.3 [  87.6,   96.3] (n=40)
+  wine       clean   93.4 [  87.5,   98.1] (n=40)   effect   86.6 [  78.4,   93.3] (n=40)   prop|sham ok   93.3 [  89.4,   96.9] (n=39)
+
+q14 / rawlog
+  credit     clean   93.4 [  88.8,   97.2] (n=40)   effect   89.7 [  83.4,   95.0] (n=39)   prop|sham ok   93.4 [  86.6,   98.9] (n=39)
+  diabetes   clean   98.1 [  95.9,   99.7] (n=40)   effect   91.5 [  85.2,   96.8] (n=40)   prop|sham ok   97.9 [  95.4,   99.8] (n=40)
+  heart      clean   95.9 [  92.8,   98.8] (n=40)   effect   90.1 [  84.1,   95.0] (n=40)   prop|sham ok   94.9 [  88.7,   98.8] (n=40)
+  iris       clean   95.6 [  92.2,   98.4] (n=40)   effect   86.7 [  81.0,   91.8] (n=40)   prop|sham ok   93.2 [  88.9,   96.8] (n=40)
+  steel      clean   95.6 [  92.2,   98.4] (n=40)   effect   92.7 [  86.2,   97.7] (n=40)   prop|sham ok   96.0 [  92.8,   98.5] (n=40)
+  wine       clean   95.0 [  90.6,   98.4] (n=40)   effect   90.4 [  83.8,   95.6] (n=40)   prop|sham ok   95.5 [  91.7,   98.6] (n=40)
+
+q32 / fullctx
+  credit     clean   99.7 [  99.1,  100.0] (n=40)   effect   91.3 [  84.7,   96.5] (n=40)   prop|sham ok   91.1 [  84.6,   96.3] (n=40)
+  diabetes   clean   99.7 [  99.1,  100.0] (n=40)   effect   90.4 [  82.0,   97.5] (n=40)   prop|sham ok   91.6 [  83.5,   98.5] (n=40)
+  heart      clean   99.1 [  97.2,  100.0] (n=40)   effect   92.9 [  85.8,   98.3] (n=40)   prop|sham ok   95.3 [  90.2,   99.1] (n=39)
+  iris       clean  100.0 [ 100.0,  100.0] (n=40)   effect   90.3 [  80.3,   97.8] (n=40)   prop|sham ok   90.3 [  80.3,   97.8] (n=40)
+  steel      clean   99.7 [  99.1,  100.0] (n=40)   effect   92.4 [  84.0,   99.4] (n=40)   prop|sham ok   92.4 [  84.0,   99.4] (n=40)
+  wine       clean   98.1 [  94.7,  100.0] (n=40)   effect   86.5 [  78.2,   93.8] (n=40)   prop|sham ok   85.2 [  75.9,   93.4] (n=40)
+
+q32 / nomem
+  credit     clean   90.6 [  88.1,   93.1] (n=40)
+  diabetes   clean   94.4 [  91.6,   96.9] (n=40)
+  heart      clean   95.0 [  92.2,   97.5] (n=40)
+  iris       clean   98.4 [  97.2,   99.7] (n=40)
+  steel      clean   96.2 [  94.1,   98.4] (n=40)
+  wine       clean   97.2 [  95.6,   98.8] (n=40)
+
+q32 / notes
+  credit     clean   90.3 [  85.6,   94.4] (n=40)   effect   67.0 [  58.0,   75.0] (n=40)   prop|sham ok   75.5 [  66.7,   84.0] (n=40)
+  diabetes   clean   97.2 [  94.4,   99.4] (n=40)   effect   79.4 [  72.5,   86.1] (n=40)   prop|sham ok   82.9 [  75.8,   89.3] (n=40)
+  heart      clean   95.3 [  91.6,   98.4] (n=40)   effect   71.7 [  62.9,   80.4] (n=40)   prop|sham ok   74.1 [  64.9,   82.9] (n=40)
+  iris       clean   99.1 [  97.8,  100.0] (n=40)   effect   82.3 [  75.6,   88.6] (n=40)   prop|sham ok   83.2 [  77.0,   89.1] (n=40)
+  steel      clean   97.5 [  95.3,   99.1] (n=40)   effect   63.1 [  55.2,   71.2] (n=40)   prop|sham ok   63.2 [  55.0,   71.1] (n=40)
+  wine       clean   97.2 [  95.0,   99.1] (n=40)   effect   69.9 [  62.0,   77.3] (n=40)   prop|sham ok   72.8 [  65.4,   79.8] (n=40)
+
+q32 / rawlog
+  credit     clean   95.9 [  92.5,   98.8] (n=40)   effect   97.0 [  93.8,   99.4] (n=40)   prop|sham ok   99.0 [  97.7,  100.0] (n=40)
+  diabetes   clean  100.0 [ 100.0,  100.0] (n=40)   effect   99.4 [  98.1,  100.0] (n=40)   prop|sham ok   99.4 [  98.1,  100.0] (n=40)
+  heart      clean   96.2 [  93.1,   98.8] (n=40)   effect   95.1 [  88.9,   99.7] (n=40)   prop|sham ok   97.1 [  92.8,  100.0] (n=39)
+  iris       clean   99.4 [  98.1,  100.0] (n=40)   effect   97.9 [  95.1,  100.0] (n=40)   prop|sham ok   99.4 [  98.5,  100.0] (n=40)
+  steel      clean   97.2 [  94.7,   99.1] (n=40)   effect   97.5 [  95.4,   99.4] (n=40)   prop|sham ok   97.8 [  95.6,   99.5] (n=40)
+  wine       clean   97.8 [  94.1,  100.0] (n=40)   effect   97.9 [  95.2,  100.0] (n=39)   prop|sham ok   98.0 [  95.5,  100.0] (n=39)
+
+04:10:58 wrote /auto/brno2/brno2/vdhong/mem-propagation/results_v2real_p2/analysis_v2real_p2_l08-q01-q03-q07-q14-q32_nomem-notes-rawlog-fullctx.txt

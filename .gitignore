@@ -1,0 +1,29 @@
+__pycache__/
+*.pyc
+.DS_Store
+# the archive is unpacked into the tree, not committed
+mem-propagation-data.tar.gz
+# rebuilt by code/prepare_real.py, not redistributed
+data/real/*.csv
+data/real/raw/
+data/_pylib/
+# LaTeX build files
+paper/*.aux
+paper/*.log
+paper/*.out
+paper/*.bbl
+paper/*.blg
+paper/*.pdf
+# local list of patterns that must not appear in the release (tools/make_manifest.py)
+tools/forbidden.txt
+# created when the pipeline is rerun
+.cache/
+selftest_out/
+data/model_ready/
+*.part
+results_*/*/exec_*/
+results_*/*/attempt_*/
+results_*/*/realtime_*.log
+results_*/*/*_output.log
+results_*/*/*_error.log
+results_*/analysis_*.txt

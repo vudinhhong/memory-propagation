@@ -1,0 +1,21 @@
+{
+ "name": "heart",
+ "group_col": "sex",
+ "numeric": [
+  "age",
+  "trestbps",
+  "chol",
+  "thalach",
+  "oldpeak",
+  "ca"
+ ],
+ "n_rows": 303,
+ "n_cols": 15,
+ "levels": {
+  "male": 206,
+  "female": 97
+ },
+ "source": "https://archive.ics.uci.edu/static/public/45/heart+disease.zip :: processed.cleveland.data",
+ "raw_sha256": "a74b7efa387bc9d108d7d0115d831fe9b414b29ae7124f331b622b4efa0427c8",
+ "citation": "Janosi A, Steinbrunn W, Pfisterer M, Detrano R (1988); UCI Machine Learning Repository, dataset 45"
+}

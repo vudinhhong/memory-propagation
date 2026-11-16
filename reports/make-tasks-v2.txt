@@ -1,0 +1,14 @@
+15:12:20   40/240 tasks
+15:12:21   80/240 tasks
+15:12:22   120/240 tasks
+15:12:23   160/240 tasks
+15:12:24   200/240 tasks
+15:12:25   240/240 tasks
+15:12:25 wrote /auto/brno2/brno2/vdhong/mem-propagation/data/tasks_v2.json (240 tasks)
+checked: every stored value and counterfactual recomputed from the CSV files (240 tasks)
+step types           : {'agg': 720, 'cond_mean': 294, 'count_between': 90, 'count_gt': 185, 'diff': 56, 'pct_change': 66, 'predict': 200, 'ratio': 47, 'share_gt': 153, 'zscore': 109}
+max depth per task   : {2: 147, 3: 75, 4: 17, 5: 1}
+injection points/task: min 2  mean 3.35  max 7  total 803
+moved descendants    : mean 1.69 per injection point
+rows per table       : 402-2493
+same_chains_as v1: identical tables, steps, true values and injection points; wording changed in {'predict': 200} steps

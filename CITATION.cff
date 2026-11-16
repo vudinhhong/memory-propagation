@@ -1,0 +1,19 @@
+cff-version: 1.2.0
+message: "If you use this release, please cite the paper."
+title: "Counterfactual measurement of error propagation through memory in language-model data-analysis agents -- code, tasks and run files"
+authors:
+  - family-names: Vu
+    given-names: Dinh-Hong
+  - family-names: Duong
+    given-names: Trong-Chi
+  - family-names: Le
+    given-names: Tuong
+    email: lc.tuong@hutech.edu.vn
+  - family-names: Le
+    given-names: Anh-Cuong
+version: 1.0.0
+date-released: 2026-11-16
+type: software
+license:
+  - MIT
+  - CC-BY-4.0

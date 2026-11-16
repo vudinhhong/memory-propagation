@@ -1,0 +1,21 @@
+{
+ "name": "credit",
+ "group_col": "sex",
+ "numeric": [
+  "limit_bal",
+  "age",
+  "bill_amt1",
+  "bill_amt2",
+  "pay_amt1",
+  "pay_amt2"
+ ],
+ "n_rows": 30000,
+ "n_cols": 25,
+ "levels": {
+  "female": 18112,
+  "male": 11888
+ },
+ "source": "https://archive.ics.uci.edu/static/public/350/default+of+credit+card+clients.zip :: default of credit card clients.xls",
+ "raw_sha256": "30c6be3abd8dcfd3e6096c828bad8c2f011238620f5369220bd60cfc82700933",
+ "citation": "Yeh IC, Lien CH (2009) Expert Syst Appl 36:2473-2480; UCI Machine Learning Repository, dataset 350"
+}

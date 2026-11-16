@@ -1,0 +1,22 @@
+{
+ "name": "diabetes",
+ "group_col": "sex",
+ "numeric": [
+  "age",
+  "bmi",
+  "bp",
+  "s1",
+  "s3",
+  "s5",
+  "y"
+ ],
+ "n_rows": 442,
+ "n_cols": 12,
+ "levels": {
+  "sex_1": 235,
+  "sex_2": 207
+ },
+ "source": "scikit-learn load_diabetes(scaled=False)",
+ "raw_sha256": null,
+ "citation": "Efron B, Hastie T, Johnstone I, Tibshirani R (2004) Least angle regression, Ann Stat 32:407-499"
+}

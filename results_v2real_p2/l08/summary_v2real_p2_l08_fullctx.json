@@ -1,0 +1,808 @@
+{
+ "name": "v2real_p2_l08_fullctx",
+ "taskset": "v2real",
+ "agent_version": "p2",
+ "model_key": "l08",
+ "model_id": "meta-llama/Llama-3.1-8B-Instruct",
+ "memcond": "fullctx",
+ "backend": "vllm",
+ "vllm": "0.20.1",
+ "n_tasks": 240,
+ "clean_step_accuracy": 0.7942708333333334,
+ "n_injection_points": 927,
+ "n_forks": 2379,
+ "skipped_injection_points": [
+  {
+   "task": "iris_00",
+   "k": 6,
+   "answer": 90.0
+  },
+  {
+   "task": "iris_01",
+   "k": 4,
+   "answer": 3.637171368122436
+  },
+  {
+   "task": "iris_01",
+   "k": 6,
+   "answer": 5.8285035424535145
+  },
+  {
+   "task": "iris_05",
+   "k": 2,
+   "answer": 3.6750000000000003
+  },
+  {
+   "task": "iris_05",
+   "k": 4,
+   "answer": null
+  },
+  {
+   "task": "iris_09",
+   "k": 5,
+   "answer": null
+  },
+  {
+   "task": "iris_09",
+   "k": 7,
+   "answer": null
+  },
+  {
+   "task": "iris_11",
+   "k": 4,
+   "answer": null
+  },
+  {
+   "task": "iris_11",
+   "k": 6,
+   "answer": null
+  },
+  {
+   "task": "iris_12",
+   "k": 5,
+   "answer": null
+  },
+  {
+   "task": "iris_14",
+   "k": 5,
+   "answer": 3.0540000000000003
+  },
+  {
+   "task": "iris_14",
+   "k": 7,
+   "answer": 3.7586666666666666
+  },
+  {
+   "task": "iris_15",
+   "k": 6,
+   "answer": 14.0
+  },
+  {
+   "task": "iris_17",
+   "k": 5,
+   "answer": 0.0
+  },
+  {
+   "task": "iris_18",
+   "k": 5,
+   "answer": 1.1109568206216707
+  },
+  {
+   "task": "iris_18",
+   "k": 6,
+   "answer": 7.562126568253069
+  },
+  {
+   "task": "iris_19",
+   "k": 5,
+   "answer": null
+  },
+  {
+   "task": "iris_23",
+   "k": 4,
+   "answer": 8.0
+  },
+  {
+   "task": "iris_23",
+   "k": 6,
+   "answer": 21.0
+  },
+  {
+   "task": "iris_26",
+   "k": 5,
+   "answer": 1.1986666666666668
+  },
+  {
+   "task": "iris_29",
+   "k": 6,
+   "answer": null
+  },
+  {
+   "task": "iris_31",
+   "k": 5,
+   "answer": 1.4252000000000002
+  },
+  {
+   "task": "iris_32",
+   "k": 7,
+   "answer": 21.0
+  },
+  {
+   "task": "iris_33",
+   "k": 7,
+   "answer": 1.8114285714285714
+  },
+  {
+   "task": "iris_34",
+   "k": 4,
+   "answer": 109.0
+  },
+  {
+   "task": "iris_36",
+   "k": 5,
+   "answer": 36.8746703650768
+  },
+  {
+   "task": "iris_36",
+   "k": 6,
+   "answer": null
+  },
+  {
+   "task": "iris_37",
+   "k": 4,
+   "answer": -1.0742515370346313
+  },
+  {
+   "task": "wine_01",
+   "k": 4,
+   "answer": 139.6071354311324
+  },
+  {
+   "task": "wine_01",
+   "k": 5,
+   "answer": null
+  },
+  {
+   "task": "wine_01",
+   "k": 6,
+   "answer": null
+  },
+  {
+   "task": "wine_01",
+   "k": 7,
+   "answer": 5.672444444444445
+  },
+  {
+   "task": "wine_04",
+   "k": 6,
+   "answer": null
+  },
+  {
+   "task": "wine_08",
+   "k": 7,
+   "answer": null
+  },
+  {
+   "task": "wine_12",
+   "k": 4,
+   "answer": null
+  },
+  {
+   "task": "wine_13",
+   "k": 4,
+   "answer": -0.423110644174401
+  },
+  {
+   "task": "wine_14",
+   "k": 2,
+   "answer": 1.935
+  },
+  {
+   "task": "wine_14",
+   "k": 3,
+   "answer": 0.6885488598764588
+  },
+  {
+   "task": "wine_14",
+   "k": 6,
+   "answer": 5.6398235629067255
+  },
+  {
+   "task": "wine_14",
+   "k": 7,
+   "answer": 1.9947087432341561
+  },
+  {
+   "task": "wine_15",
+   "k": 5,
+   "answer": 0.0
+  },
+  {
+   "task": "wine_16",
+   "k": 6,
+   "answer": null
+  },
+  {
+   "task": "wine_19",
+   "k": 5,
+   "answer": null
+  },
+  {
+   "task": "wine_20",
+   "k": 2,
+   "answer": 14.1
+  },
+  {
+   "task": "wine_20",
+   "k": 3,
+   "answer": 0.46212535966129437
+  },
+  {
+   "task": "wine_20",
+   "k": 4,
+   "answer": null
+  },
+  {
+   "task": "wine_20",
+   "k": 7,
+   "answer": 29.0
+  },
+  {
+   "task": "wine_24",
+   "k": 4,
+   "answer": null
+  },
+  {
+   "task": "wine_25",
+   "k": 4,
+   "answer": null
+  },
+  {
+   "task": "wine_25",
+   "k": 7,
+   "answer": 106.5111111111111
+  },
+  {
+   "task": "wine_30",
+   "k": 4,
+   "answer": 20.332710421246322
+  },
+  {
+   "task": "wine_30",
+   "k": 5,
+   "answer": 3.8076817825062124
+  },
+  {
+   "task": "wine_30",
+   "k": 7,
+   "answer": 0.0
+  },
+  {
+   "task": "wine_33",
+   "k": 5,
+   "answer": null
+  },
+  {
+   "task": "wine_37",
+   "k": 4,
+   "answer": null
+  },
+  {
+   "task": "wine_37",
+   "k": 5,
+   "answer": null
+  },
+  {
+   "task": "wine_39",
+   "k": 6,
+   "answer": null
+  },
+  {
+   "task": "wine_39",
+   "k": 7,
+   "answer": 752.3517818741321
+  },
+  {
+   "task": "diabetes_01",
+   "k": 5,
+   "answer": 91.6867336683417
+  },
+  {
+   "task": "diabetes_07",
+   "k": 4,
+   "answer": null
+  },
+  {
+   "task": "diabetes_10",
+   "k": 4,
+   "answer": null
+  },
+  {
+   "task": "diabetes_10",
+   "k": 6,
+   "answer": null
+  },
+  {
+   "task": "diabetes_11",
+   "k": 6,
+   "answer": 4.877828717948718
+  },
+  {
+   "task": "diabetes_12",
+   "k": 7,
+   "answer": null
+  },
+  {
+   "task": "diabetes_16",
+   "k": 4,
+   "answer": null
+  },
+  {
+   "task": "diabetes_16",
+   "k": 5,
+   "answer": 51.10502283105023
+  },
+  {
+   "task": "diabetes_16",
+   "k": 7,
+   "answer": 38.555047994221226
+  },
+  {
+   "task": "diabetes_19",
+   "k": 4,
+   "answer": null
+  },
+  {
+   "task": "diabetes_26",
+   "k": 5,
+   "answer": 138.0
+  },
+  {
+   "task": "diabetes_26",
+   "k": 6,
+   "answer": 99.0
+  },
+  {
+   "task": "diabetes_28",
+   "k": 5,
+   "answer": null
+  },
+  {
+   "task": "diabetes_30",
+   "k": 5,
+   "answer": 4.6664040779595615
+  },
+  {
+   "task": "diabetes_32",
+   "k": 5,
+   "answer": null
+  },
+  {
+   "task": "diabetes_34",
+   "k": 6,
+   "answer": null
+  },
+  {
+   "task": "diabetes_36",
+   "k": 5,
+   "answer": 195.0
+  },
+  {
+   "task": "diabetes_38",
+   "k": 5,
+   "answer": null
+  },
+  {
+   "task": "diabetes_39",
+   "k": 6,
+   "answer": 91.6680636837441
+  },
+  {
+   "task": "heart_04",
+   "k": 7,
+   "answer": 247.6055601193307
+  },
+  {
+   "task": "heart_06",
+   "k": 4,
+   "answer": 143.44230769230768
+  },
+  {
+   "task": "heart_06",
+   "k": 6,
+   "answer": 0.7804687499999999
+  },
+  {
+   "task": "heart_07",
+   "k": 7,
+   "answer": 137.0
+  },
+  {
+   "task": "heart_09",
+   "k": 5,
+   "answer": 36.0
+  },
+  {
+   "task": "heart_12",
+   "k": 6,
+   "answer": 140.52032520325204
+  },
+  {
+   "task": "heart_14",
+   "k": 5,
+   "answer": null
+  },
+  {
+   "task": "heart_14",
+   "k": 6,
+   "answer": 138.0
+  },
+  {
+   "task": "heart_15",
+   "k": 7,
+   "answer": 0.6722408026755853
+  },
+  {
+   "task": "heart_17",
+   "k": 6,
+   "answer": null
+  },
+  {
+   "task": "heart_17",
+   "k": 7,
+   "answer": null
+  },
+  {
+   "task": "heart_18",
+   "k": 5,
+   "answer": 160.0
+  },
+  {
+   "task": "heart_20",
+   "k": 6,
+   "answer": null
+  },
+  {
+   "task": "heart_20",
+   "k": 7,
+   "answer": null
+  },
+  {
+   "task": "heart_23",
+   "k": 6,
+   "answer": null
+  },
+  {
+   "task": "heart_23",
+   "k": 7,
+   "answer": null
+  },
+  {
+   "task": "heart_39",
+   "k": 6,
+   "answer": null
+  },
+  {
+   "task": "credit_00",
+   "k": 5,
+   "answer": 2833.0
+  },
+  {
+   "task": "credit_00",
+   "k": 6,
+   "answer": null
+  },
+  {
+   "task": "credit_01",
+   "k": 4,
+   "answer": 58760.89890186508
+  },
+  {
+   "task": "credit_01",
+   "k": 7,
+   "answer": 55376.82852852853
+  },
+  {
+   "task": "credit_03",
+   "k": 2,
+   "answer": 66233.0
+  },
+  {
+   "task": "credit_03",
+   "k": 4,
+   "answer": 7625.216559401635
+  },
+  {
+   "task": "credit_05",
+   "k": 7,
+   "answer": 6723.0
+  },
+  {
+   "task": "credit_07",
+   "k": 4,
+   "answer": 378888.8888888889
+  },
+  {
+   "task": "credit_11",
+   "k": 4,
+   "answer": null
+  },
+  {
+   "task": "credit_12",
+   "k": 7,
+   "answer": -167484.32266666667
+  },
+  {
+   "task": "credit_14",
+   "k": 6,
+   "answer": 2521033621.4155674
+  },
+  {
+   "task": "credit_18",
+   "k": 7,
+   "answer": null
+  },
+  {
+   "task": "credit_19",
+   "k": 7,
+   "answer": null
+  },
+  {
+   "task": "credit_21",
+   "k": 6,
+   "answer": 150249.67981400047
+  },
+  {
+   "task": "credit_29",
+   "k": 6,
+   "answer": null
+  },
+  {
+   "task": "credit_30",
+   "k": 4,
+   "answer": null
+  },
+  {
+   "task": "credit_30",
+   "k": 6,
+   "answer": 6321.59504193849
+  },
+  {
+   "task": "credit_33",
+   "k": 4,
+   "answer": null
+  },
+  {
+   "task": "credit_33",
+   "k": 5,
+   "answer": 53597.06306799518
+  },
+  {
+   "task": "credit_33",
+   "k": 6,
+   "answer": 204947.13417484806
+  },
+  {
+   "task": "credit_37",
+   "k": 5,
+   "answer": null
+  },
+  {
+   "task": "steel_01",
+   "k": 4,
+   "answer": 261.0
+  },
+  {
+   "task": "steel_01",
+   "k": 7,
+   "answer": null
+  },
+  {
+   "task": "steel_04",
+   "k": 5,
+   "answer": null
+  },
+  {
+   "task": "steel_04",
+   "k": 6,
+   "answer": 206312.14786192685
+  },
+  {
+   "task": "steel_09",
+   "k": 5,
+   "answer": null
+  },
+  {
+   "task": "steel_09",
+   "k": 7,
+   "answer": 1941.0
+  },
+  {
+   "task": "steel_11",
+   "k": 6,
+   "answer": 29.6172966966297
+  },
+  {
+   "task": "steel_11",
+   "k": 7,
+   "answer": 0.3358856847927587
+  },
+  {
+   "task": "steel_17",
+   "k": 6,
+   "answer": null
+  },
+  {
+   "task": "steel_18",
+   "k": 4,
+   "answer": 392.0
+  },
+  {
+   "task": "steel_19",
+   "k": 2,
+   "answer": 33.0
+  },
+  {
+   "task": "steel_19",
+   "k": 3,
+   "answer": 54.718554189039956
+  },
+  {
+   "task": "steel_19",
+   "k": 5,
+   "answer": 1830.4285714285713
+  },
+  {
+   "task": "steel_20",
+   "k": 5,
+   "answer": 0.0
+  },
+  {
+   "task": "steel_27",
+   "k": 6,
+   "answer": null
+  },
+  {
+   "task": "steel_30",
+   "k": 5,
+   "answer": 74.61376248612653
+  },
+  {
+   "task": "steel_30",
+   "k": 6,
+   "answer": -0.13000755303754913
+  },
+  {
+   "task": "steel_32",
+   "k": 5,
+   "answer": null
+  },
+  {
+   "task": "steel_38",
+   "k": 6,
+   "answer": 229089.098855359
+  }
+ ],
+ "prompts_too_long": 0,
+ "seconds_clean": 254,
+ "seconds_total": 1524,
+ "config": {
+  "tasksets": {
+   "v1": {
+    "kind": "synthetic",
+    "n_tasks": 240,
+    "task_seed": 20261113,
+    "results_dir": "results_v1_p2",
+    "job_prefix": "",
+    "predict_wording": "ab"
+   },
+   "v1real": {
+    "kind": "real",
+    "per_dataset": 40,
+    "task_seed": 20261114,
+    "results_dir": "results_v1real_p2",
+    "job_prefix": "R",
+    "datasets": [
+     "iris",
+     "wine",
+     "diabetes",
+     "heart",
+     "credit",
+     "steel"
+    ],
+    "predict_wording": "ab"
+   },
+   "v2": {
+    "kind": "synthetic",
+    "n_tasks": 240,
+    "task_seed": 20261113,
+    "results_dir": "results_v2_p2",
+    "job_prefix": "V",
+    "predict_wording": "plain",
+    "same_chains_as": "v1"
+   },
+   "v2real": {
+    "kind": "real",
+    "per_dataset": 40,
+    "task_seed": 20261114,
+    "results_dir": "results_v2real_p2",
+    "job_prefix": "VR",
+    "datasets": [
+     "iris",
+     "wine",
+     "diabetes",
+     "heart",
+     "credit",
+     "steel"
+    ],
+    "predict_wording": "plain",
+    "same_chains_as": "v1real"
+   }
+  },
+  "agent_version": "p2",
+  "agent_version_note": "p1 = first run (results_v1, results_v1real): ambiguous ANSWER instruction, long data path; p2 = explicit print line + example, short read-only data copy, identical step-1 prompt",
+  "n_steps": 8,
+  "models": {
+   "q01": {
+    "id": "Qwen/Qwen2.5-1.5B-Instruct",
+    "size": "S"
+   },
+   "q03": {
+    "id": "Qwen/Qwen2.5-3B-Instruct",
+    "size": "S"
+   },
+   "q07": {
+    "id": "Qwen/Qwen2.5-7B-Instruct",
+    "size": "S"
+   },
+   "l08": {
+    "id": "meta-llama/Llama-3.1-8B-Instruct",
+    "size": "S"
+   },
+   "q14": {
+    "id": "Qwen/Qwen2.5-14B-Instruct",
+    "size": "M"
+   },
+   "q32": {
+    "id": "Qwen/Qwen2.5-32B-Instruct",
+    "size": "L"
+   }
+  },
+  "sizes": {
+   "S": {
+    "gpu_memory_utilization": 0.85,
+    "tensor_parallel_size": 1
+   },
+   "M": {
+    "gpu_memory_utilization": 0.88,
+    "tensor_parallel_size": 1
+   },
+   "L": {
+    "gpu_memory_utilization": 0.92,
+    "tensor_parallel_size": 1
+   }
+  },
+  "memconds": [
+   "nomem",
+   "notes",
+   "rawlog",
+   "fullctx"
+  ],
+  "llm_seed": 0,
+  "max_model_len": 16384,
+  "max_tokens_code": 768,
+  "max_tokens_note": 64,
+  "max_tokens_report": 320,
+  "max_attempts": 2,
+  "exec_workers": 6,
+  "exec_timeout_s": 20,
+  "exec_mem_gb": 6,
+  "stdout_shown_chars": 600,
+  "code_shown_chars": 3000,
+  "stdout_kept_chars": 1500,
+  "rtol": 0.002,
+  "atol": 0.0001,
+  "moved_factor": 10,
+  "bootstrap": 2000
+ }
+}
