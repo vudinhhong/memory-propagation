@@ -1,8 +1,8 @@
 {
   "title": "Counterfactual measurement of error propagation through memory in language-model data-analysis agents: code, tasks and run files",
   "upload_type": "software",
-  "version": "1.0.3",
-  "description": "<p>Code, task definitions and run files for a fork experiment that measures how a single wrong value in a data-analysis agent's memory propagates to its later results. The release contains the task generator and reference evaluator (exact true and counterfactual values for every step), the agent with four memory conditions, the fork runner, the analysis and figure scripts, the 960 task definitions (synthetic and public tables, two wordings of the OLS step), the 240 synthetic tables per wording, and the clean-run and fork records of six open-weight models in every memory condition. Every number, table and figure of the paper can be recomputed from these files without a GPU. Code is released under the MIT License; tasks, synthetic tables, run files, reports and figures under CC BY 4.0 (see LICENSE).</p>",
+  "version": "1.0.4",
+  "description": "<p>Code, task definitions and run files for a fork experiment that measures how a single wrong value in a data-analysis agent's memory propagates to its later results. The release contains the task generator and reference evaluator (exact true and counterfactual values for every step), the agent with four memory conditions, the fork runner, the analysis and figure scripts, the 960 task definitions (synthetic and public tables, two wordings of the OLS step), the 240 synthetic tables per wording, and the clean-run and fork records of six open-weight models in every memory condition. Every number, table and figure of the paper can be recomputed from these files without a GPU. Code is released under the MIT License; tasks, synthetic tables, run files, reports and figures under CC BY 4.0 (see LICENSE and LICENSE-DATA).</p>",
   "creators": [
     {"name": "Vu, Dinh-Hong", "affiliation": "Ton Duc Thang University"},
     {"name": "Duong, Trong-Chi", "affiliation": "Ton Duc Thang University"},
