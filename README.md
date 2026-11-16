@@ -51,6 +51,7 @@ GPU.
     diagnose.py              why clean-run steps fail; --trace splits wrong values by cause
     make_figures.py          every figure of the paper, with figdata_*.json
     make_s1_table.py         S1 Table, from the four analyse.py reports in reports/
+    make_s1_text.py          S1 Text: every prompt, rendered by the agent code for one task
     check-status.py          status of the cluster jobs; --resubmit for failed ones
     data/                    task definitions, synthetic tables, metadata of the public tables
     results_<taskset>_p2/    run files
@@ -80,11 +81,14 @@ analysis plan for `v2` was fixed before it ran.
 ## Recomputing the results without a GPU
 
 Python 3.10 with numpy, pandas and matplotlib (`pip install -r requirements.txt`).
+Rebuilding the public tables with `code/prepare_real.py` also needs
+scikit-learn (diabetes data) and xlrd (the credit-default .xls file).
 
     python analyse.py --taskset v2          # Table 3, all fork measures and controls
     python analyse.py --taskset v2real
-    python make_figures.py                  # Figs 1-10, S1 Fig, S2 Fig -> paper/figures/; S2 Table -> paper/
+    python make_figures.py                  # Figs 1-10, S1/S2 Fig (pdf, png, tif) -> paper/figures/; S2 Table -> paper/
     python make_s1_table.py                 # S1 Table -> paper/S1_Table.tex
+    python make_s1_text.py                  # S1 Text (prompts) -> paper/S1_Text.tex
     python diagnose.py --taskset v2 --models q14 q32 --memconds notes rawlog fullctx --trace
 
 `analyse.py` never overwrites an existing report: a new report gets a time

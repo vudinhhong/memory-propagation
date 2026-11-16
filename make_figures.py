@@ -129,12 +129,16 @@ class TaskSet:
 
 
 def save(fig, name, outdir, data):
+    """figN.pdf (LaTeX), figN.png (checking), figN.tif (journal submission: RGB, LZW, 300 dpi)."""
     for ext in ("pdf", "png"):
         fig.savefig(outdir / f"{name}.{ext}", bbox_inches="tight",
                     metadata={"CreationDate": None} if ext == "pdf" else None)   # byte-identical reruns
     plt.close(fig)
+    from PIL import Image
+    with Image.open(outdir / f"{name}.png") as im:
+        im.convert("RGB").save(outdir / f"{name}.tif", compression="tiff_lzw", dpi=(300, 300))
     (outdir / f"figdata_{name}.json").write_text(json.dumps(data, indent=1))
-    print(f"  wrote {name}.pdf/.png and figdata_{name}.json", flush=True)
+    print(f"  wrote {name}.pdf/.png/.tif and figdata_{name}.json", flush=True)
 
 
 def top_legend(fig, handles, labels, ncol, y=1.0):
@@ -472,7 +476,7 @@ def fig_headline(sets, outdir, args):
         S = sets[ts]
         st = {c: [S.bt(S.prop_c((m, c))) for m in MODELS] for c in FCONDS}
         data[ts] = {c: dict(zip(MODELS, v)) for c, v in st.items()}
-        pointranges(ax, st, FCONDS, connect=True)
+        pointranges(ax, st, FCONDS)
         ax.set_ylim(-3, 103)
         ax.set_yticks(range(0, 101, 20))
         ax.set_title(f"{TSLABEL[ts]}")
@@ -531,28 +535,27 @@ def fig_contrasts(sets, outdir, args):
 
 def fig_mechanism(sets, outdir, args):
     S = sets["v2"]
-    fig, axes = plt.subplots(2, 2, figsize=(FULL_W, 4.3), sharex=True)
-    specs = [("Recovery: inject still correct when sham is correct", "steps (%)", lambda k: S.keep_c(k), (0, 100)),
-             ("Value of step k copied into the script (inject arm)", "scripts (%)",
+    fig, axes = plt.subplots(1, 3, figsize=(FULL_W, 2.7))
+    specs = [("Recovery", "inject still correct when\nsham is correct (%)", lambda k: S.keep_c(k), (0, 100)),
+             ("Copying (inject arm)", "scripts with the value of\nstep k as a literal (%)",
               lambda k: arm_values(S.ftm(k), "literal", "inject"), (0, 100)),
-             ("Copying, inject minus sham", "difference (points)", lambda k: paired(S.ftm(k), "literal"), (-10, 10)),
-             ("Final report gives w for step k (inject arm)", "forks (%)",
-              lambda k: arm_values(S.ftm(k), "rep_k_is_w", "inject"), (90, 100.8))]
+             ("Copying, inject minus sham", "difference (points)", lambda k: paired(S.ftm(k), "literal"), (-10, 10))]
     data = {}
-    for ax, (title, ylab, fn, ylim), lab in zip(axes.flat, specs, "ABCD"):
+    for ax, (title, ylab, fn, ylim), lab in zip(axes.flat, specs, "ABC"):
         st = {c: [S.bt(fn((m, c))) for m in MODELS] for c in FCONDS}
         data[title] = {c: dict(zip(MODELS, v)) for c, v in st.items()}
-        pointranges(ax, st, FCONDS, connect=True, ms=4, strong=True)
+        pointranges(ax, st, FCONDS, ms=4)
+        plt.setp(ax.get_xticklabels(), rotation=40, ha="right", fontsize=6.5)
         ax.set_ylim(*ylim)
         if ylim[0] < 0:
             ax.axhline(0, color="black", lw=0.5)
         ax.set_title(title)
         ax.set_ylabel(ylab)
         ax.grid(axis="y", lw=0.3, alpha=0.5)
-        panel_label(ax, lab, x=-0.12)
-    h, l = axes[0, 0].get_legend_handles_labels()
-    top_legend(fig, h, l, 3)
-    fig.tight_layout(h_pad=1.5)
+        panel_label(ax, lab, x=-0.3)
+    fig.tight_layout(w_pad=1.5)
+    h, l = axes[0].get_legend_handles_labels()
+    top_legend(fig, h, l, 3, y=0.97)
     save(fig, "fig8", outdir, data)
 
 
