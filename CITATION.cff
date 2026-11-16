@@ -11,7 +11,8 @@ authors:
     email: lc.tuong@hutech.edu.vn
   - family-names: Le
     given-names: Anh-Cuong
-version: 1.0.0
+version: 1.0.1
+doi: 10.5281/zenodo.24274470
 date-released: 2026-11-16
 type: software
 license: MIT

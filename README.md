@@ -1,5 +1,7 @@
 # Error propagation through memory in data-analysis agents
 
+[![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.24274470.svg)](https://doi.org/10.5281/zenodo.24274470)
+
 Code, tasks and run files for the paper *Counterfactual measurement of error
 propagation through memory in language-model data-analysis agents*.
 
@@ -136,6 +138,10 @@ model reproduces it in 73-87%, depending on the condition. This is the
 * The runs of the first agent version (p1). Its prompt let small models write
   the answer line as code that prints nothing, so those runs are invalid.
 * Job logs and model weights.
+
+## Citation
+
+Archive: https://doi.org/10.5281/zenodo.24274470 (all versions; see `CITATION.cff`).
 
 ## Licence
 
